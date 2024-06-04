@@ -1,0 +1,18 @@
+videoURL = [
+  {
+    "report": [
+      {
+        "isSuccess": true,
+        "videoUrl": "/Proctormatic-demo-kr/media/reportSpecific/0/0/combined_video.mp4"
+      },
+      {
+        "isSuccess": true,
+        "videoUrl": "/Proctormatic-demo-kr/media/reportSpecific/0/1/combined_video.mp4"
+      },
+      {
+        "isSuccess": true,
+        "videoUrl": "/Proctormatic-demo-kr/media/reportSpecific/0/2/combined_video.mp4"
+      },
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+testerList = [
+  {
+    "isSuccess": true,
+    "testerList": {
+        "detectList": [
+            {
+                "testerId": "11663",
+                "testerName": "Cho Yujin",
+                "abnormals": 1,
+                "cheats": 5,
+                "check": "confirmStatus",
+                "clickable": true,
+                "index": 0
+            },
+            {
+                "testerId": "11666",
+                "testerName": "Kang seokwoo",
+                "abnormals": 0,
+                "cheats": 5,
+                "check": "confirmStatus",
+                "clickable": true,
+                "index": 1
+            },
+            {
+                "testerId": "11661",
+                "testerName": "Shin Hohwan",
+                "abnormals": 1,
+                "cheats": 3,
+                "check": "confirmStatus",
+                "clickable": true,
+                "index": 2
+            },
+            {
+                "testerId": "11657",
+                "testerName": "An Jiyong",
+                "abnormals": 0,
+                "cheats": 1,
+                "check": "confirmStatus"
+            }
+        ],
+        "normalList": [
+            {
+                "testerId": "11659",
+                "testerName": "Kim JuHuyk",
+                "abnormals": 4,
+                "cheats": 0,
+                "check": "normalStatus"
+            },
+            {
+                "testerId": "11658",
+                "testerName": "Lee Jihun",
+                "abnormals": 2,
+                "cheats": 0,
+                "check": "normalStatus"
+            },
+            {
+                "testerId": "11660",
+                "testerName": "Bethany Jung",
+                "abnormals": 1,
+                "cheats": 0,
+                "check": "normalStatus"
+            },
+            {
+                "testerId": "11664",
+                "testerName": "Chloe",
+                "abnormals": 0,
+                "cheats": 0,
+                "check": "normalStatus"
+            },
+            {
+                "testerId": "11667",
+                "testerName": "Kevin",
+                "abnormals": 0,
+                "cheats": 0,
+                "check": "normalStatus"
+            },
+            {
+                "testerId": "11656",
+                "testerName": "Lee YeJin",
+                "abnormals": 0,
+                "cheats": 0,
+                "check": "normalStatus"
+            }
+        ],
+        "notTakingList": [],
+        "analysisErrorList": [
+            {
+                "testerId": "11668",
+                "testerName": "Kim Boram",
+                "abnormals": 0,
+                "cheats": 0,
+                "check": "errorStatus"
+            }
+        ]
+    }
+  }
+]

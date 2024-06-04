@@ -1,0 +1,20 @@
+{
+  "name": "Proctormatic",
+  "short_name": "Proctormatic Demo",
+  "start_url": "/Proctormatic-demo-kr/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/Proctormatic-demo-kr/logo_proctormatic_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Proctormatic-demo-kr/logo_proctormatic_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

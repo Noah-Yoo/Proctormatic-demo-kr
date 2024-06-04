@@ -1,0 +1,2300 @@
+@media screen and (min-width : 1140px) {
+  #ReSpUp {
+    max-width: 100%;
+    background-color: #f0f1f2;
+  }
+  #ReSpUp .onlyForMobile {
+    display: none !important;
+  }
+  #ReSpUp .upTitle .flexing {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 19px;
+    font-size: 28px;
+    font-family: "Bold";
+    line-height: 41px;
+  }
+  #ReSpUp .upTitle .flexing img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  #ReSpUp .upTitle .users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 239px;
+    height: 41px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    font-family: "regular";
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .naming {
+    margin-left: 10px;
+    line-height: 24px;
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .counting {
+    margin: 0 20px 0 auto;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: "medium";
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .state {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  #ReSpUp .upTitle .users .studentListBox {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 494px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-top-right-radius: 20.5px;
+    border-top-left-radius: 20.5px;
+    font-size: 16px;
+    font-family: "regular";
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage {
+    position: absolute;
+    color: #2276dc;
+    background: #ffffff;
+    border-top-right-radius: 20.5px;
+    border-top-left-radius: 20.5px;
+    /* border-bottom-left-radius: ${(props) =>
+      props.studentCount > 1 ? "" : "20.5px"}; */
+    /* border-bottom-right-radius: ${(props) =>
+      props.studentCount > 1 ? "" : "20.5px"}; */
+    right: 0px;
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfdfdf;
+    width: 312px;
+    height: 52px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .naming {
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .counting {
+    margin: 0 20px 0 auto;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .state {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing {
+    top: 52px;
+    width: 312px;
+    overflow-x: hidden;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    margin-top: 100px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 100px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  #ReSpUp .reportContent {
+    position: relative;
+    width: 1108px;
+    padding: 114px 60px 60px;
+    margin-top: 140px;
+    background-color: white;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  #ReSpUp .reportContent .title {
+    font-size: 18px;
+    font-family: "medium";
+    line-height: 27px;
+    margin-bottom: 15px;
+  }
+  #ReSpUp .reportContent .userPhoto {
+    position: absolute;
+    top: -100px;
+    left: 60px;
+    width: 180px;
+    height: 180px;
+    border: 6px solid #ffffff;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox {
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .titlePart {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-family: "medium";
+    line-height: 27px;
+    color: black;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .titlePart img {
+    width: 16px;
+    cursor: pointer;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .bodyPart {
+    font-size: 18px;
+    font-family: "regular";
+    line-height: 27px;
+    color: #444444;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .namePart {
+    font-size: 16px;
+    font-family: "regular";
+    line-height: 24px;
+    color: #444444;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .emailPart {
+    font-size: 18px;
+    font-family: "regular";
+    line-height: 27px;
+    color: #2276dc;
+    text-decoration: underline;
+  }
+  #ReSpUp .reportContent .testerInformationBox .lineUp {
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    padding: 14px 0;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox .left {
+    color: #55595f;
+    font-size: 12.5px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .right {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    box-sizing: border-box;
+    font-family: "Medium";
+    min-height: 36px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .blue {
+    color: #2276dc;
+    display: flex;
+    align-items: center;
+    font-family: "Medium";
+    padding: 6px 0;
+    width: auto;
+    box-sizing: border-box;
+    text-decoration: underline;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff5da;
+    border-radius: 12px;
+    padding: 44px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-size: cover;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .mainMessage {
+    font-size: 24px;
+    font-family: "bold";
+    line-height: 36px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .subMessage {
+    margin: 10px 0 20px;
+    line-height: 24px;
+    font-family: "Regular";
+    font-size: 16px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .timeMessage {
+    display: flex;
+    margin-bottom: 6px;
+    line-height: 24px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .timeMessage span {
+    margin-left: 25px;
+    color: #2276dc;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .notificationMessage {
+    color: #828282;
+    font-size: 12px;
+    font-family: "regular";
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .image {
+    width: 142px;
+    height: 132px;
+  }
+  #ReSpUp .reportContent .detectedEventBox {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 402px;
+    height: 290px;
+    padding: 105px 18px 66px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside {
+    display: grid;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .what {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 47px;
+    font-size: 18px;
+    font-family: "regular";
+    line-height: 27px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .circleRed {
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #c83b38;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .circleYellow {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #ffbc00;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .down {
+    margin: 0 auto;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .down .num {
+    font-size: 40px;
+    font-family: "medium";
+    line-height: 59px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight {
+    display: flex;
+    flex-direction: column;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    font-family: "regular";
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0 0 15px auto;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine .rawDataCheckBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 0.6px solid #818181;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine .rawDataCheckBox.rawCheck {
+    background-color: #20315B;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 678px;
+    min-height: 208px;
+    border: 1px solid #d6d9dd;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin {
+    height: 46px;
+    border-bottom: 1px solid #d6d9dd;
+    background-color: #fafafa;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader div,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin {
+    height: 10px;
+    background-color: white;
+    border-bottom: none;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .accCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+    text-align: center;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent {
+    display: grid;
+    grid-template-columns: 476px 100px 100px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent {
+    height: 40px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent .middleCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 162px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent .middleCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore {
+    height: 40px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore .eventMore {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 8px 38px;
+    text-decoration: underline;
+    color: #2276dc;
+    cursor: pointer;
+  }
+  #ReSpUp .reportContent .detectedVideoBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: "regular";
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo .infoItemForm {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo .infoItemForm .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo {
+    width: 100%;
+    height: 56px;
+    border-right: 1px solid #444444;
+    border-left: 1px solid #444444;
+    margin: 16px 0 24px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .fromStartToEnd {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: "regular";
+    line-height: 15px;
+    color: #818181;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    margin-top: 26px;
+    background: rgba(140, 224, 174, 0.3);
+    overflow: hidden;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart .unitBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1px;
+    color: #aeaeae;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart .unitBar .columnStick {
+    width: 1px;
+    height: 21px;
+    border-left: 1px dashed #aeaeae;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .eventBarPart {
+    position: absolute;
+    z-index: 9;
+    bottom: 15px;
+    left: 0;
+    display: flex;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .rightShow {
+    display: flex;
+    align-items: center;
+    font-family: "Regular";
+    font-size: 16px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo video {
+    width: 529.5px;
+    flex-grow: 1;
+    height: 353px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList {
+    display: flex;
+    flex-direction: column;
+    width: 578.5px;
+    padding: 12px 9px 16px;
+    box-sizing: border-box;
+    background-color: #f0f1f2;
+    height: 353px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoLeftIn {
+    width: 100%;
+    height: 268px;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoLeftIn::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    margin-top: 100px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoLeftIn::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 100px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoLeftIn::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoLeftInTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bdbdbd;
+    width: 100%;
+    height: 268px;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoSharingButton {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+    margin: 23px auto 0;
+    font-size: 16px;
+    font-family: "medium";
+    line-height: 24px;
+    /* color: ${(props) =>
+      props.$clickedEvent === 0 ? "rgba(34,118,220,0.5)" : "#2276DC"}; */
+    /* cursor: ${(props) =>
+      props.$clickedEvent === 0 ? "default" : "pointer"}; */
+    color: rgba(34,118,220,0.5);
+    cursor: default;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoSharingButton.clicked {
+    color: #2276DC;
+    cursor: pointer;
+  }
+  #ReSpUp .reportContent .detectedGraphBox {
+    margin-top: 60px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 38px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .forBody {
+    width: 363px;
+    margin-left: 56px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    min-width: 50px;
+    height: 122px;
+    padding: 18px 0 2px 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line {
+    display: flex;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .tag {
+    font-family: "Regular";
+    font-size: 12px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle1 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state1}; */
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle2 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state2}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle3 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state3}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle4 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state4}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle5 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state5}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .right {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: 48px;
+    height: 122px;
+    padding: 18px 0 2px 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .right .line {
+    width: 100%;
+  }
+  #ReSpUp .reportContent .environmentBucket {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 60px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart {
+    display: flex;
+    justify-content: space-between;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .title {
+    margin-bottom: 0px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemOne,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemTwo,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemThree,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemFour {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemOne {
+    /* color: ${(props) =>
+      props.environmentFilter === 1 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemTwo {
+    /* color: ${(props) =>
+      props.environmentFilter === 2 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemThree {
+    /* color: ${(props) =>
+      props.cameraSettingFilter === 1 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemFour {
+    /* color: ${(props) =>
+      props.cameraSettingFilter === 2 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemOne.show,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemTwo.show,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemThree.show,
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .retakeFilterItemFour.show {
+    color: #2276DC;
+  }
+
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .titlePart .filterForRetake .middleBar {
+    width: 1px;
+    height: 12px;
+    background-color: #c4c4c4;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .photoPart {
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .photoPart .tempered {
+    width: 100%;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .photoPart .tempered.detected {
+    border: 2px solid #C83B38;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .photoPart img {
+    width: 540px;
+    height: 293.76px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .photoPart .photoCount {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 24px;
+    font-size: 14px;
+    font-family: "semibold";
+    line-height: 21px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
+    color: white;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .warningPart {
+    display: grid;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 12px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .warningPart .warningText {
+    color: #c83b38;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .environmentBucket .environmentForTestBox .warningPart .infoText {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  #ReSpUp .viewall 
+  {
+    margin-left: 10px;
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewcheating {
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewabnormal {
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewall.show {
+    color: #2276DC;
+  } 
+  #ReSpUp .viewcheating.show {
+    color: #2276DC;
+  }
+  #ReSpUp .viewabnormal.show {
+    color: #2276DC;
+  }
+  #ReSpUp .greyColumn {
+    width: 1px;
+    height: 16px;
+    background-color: #c4c4c4;
+    margin: 0 12px;
+  }
+  #ReSpUp .rightShow {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  #ReSpUp .userVideo {
+    background-color: black;
+  }
+  #ReSpUp .talk {
+    display: flex;
+    align-items: center;
+  }
+  #ReSpUp .triangle {
+    width: 0px;
+    height: 0px;
+    border-right: 39px solid #fff4d8;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin: auto 0;
+  }
+  #ReSpUp .listing {
+    position: absolute;
+    width: 312px;
+    right: 0;
+    top: 52px;
+    max-height: 577px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 20.5px;
+    border-bottom-right-radius: 20.5px;
+  }
+  #ReSpUp .listing::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    margin-top: 100px;
+  }
+  #ReSpUp .listing::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 100px;
+  }
+  #ReSpUp .listing::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  #ReSpUp .just {
+    position: relative;
+  }
+  #ReSpUp .bar {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e0e0df;
+    background-color: white;
+    border-radius: 24px;
+    height: 41px;
+  }
+  #ReSpUp .counting {
+    margin: 0 16px 0 auto;
+  }
+  #ReSpUp .name {
+    margin-left: 10px;
+  }
+  #ReSpUp .naming {
+    width: 100px;
+    white-space: nowrap;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #ReSpUp .stating {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  .state {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  #ReSpUp .users {
+    position: relative;
+    font-size: 16px;
+    font-family: "Regular";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 239px;
+    border-radius: 21px;
+    box-sizing: border-box;
+    margin: auto 0 auto auto;
+    cursor: pointer;
+  }
+  #ReSpUp .count {
+    width: 98px;
+    height: 38px;
+    padding: 6px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+  }
+  #ReSpUp .time {
+    width: 98px;
+    padding: 6px 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  #ReSpUp .actions {
+    width: 520px;
+    height: 50px;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  #ReSpUp .actionsss {
+    display: flex;
+    justify-content: center;
+    color: #bdbdbd;
+    width: 520px;
+    height: 50px;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-family: "light";
+  }
+  #ReSpUp .underLine {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    line-height: 20px;
+    margin-left: 10px;
+    align-items: center;
+    color: #2276dc;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #ReSpUp .lining {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+  }
+  #ReSpUp .upTitle {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-family: "Bold";
+  }
+  #ReSpUp .lineUp {
+    display: flex;
+    align-items: center;
+  }
+  #ReSpUp .body {
+    width: 1228px;
+    padding: 80px 0px;
+    margin: 0 auto;
+    background-color: #f0f1f2;
+  }
+  #ReSpUp .body .up {
+    margin-bottom: 15px;
+  }
+  #ReSpUp .body .down {
+    margin: 60px 0 15px 0;
+  }
+  #ReSpUp .title {
+    display: flex;
+    font-family: "Medium";
+    font-size: 18px;
+  }
+  #ReSpUp .texts {
+    position: absolute;
+    top: 46%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+  }
+  #ReSpUp .texts span {
+    color: #c83b38;
+  }
+  #ReSpUp .mainMessage {
+    font-size: 24px;
+    font-family: "Bold";
+  }
+  #ReSpUp .subMessage {
+    font-family: "Regular";
+    margin: 10px 0 20px 0;
+  }
+  #ReSpUp .notificationMessage {
+    color: #828282;
+    font-size: 12px;
+    font-family: "Regular";
+  }
+  #ReSpUp .line {
+    display: flex;
+    align-items: center;
+  }
+  #ReSpUp .left {
+    width: 180px;
+    font-size: 18px;
+    font-family: "Medium";
+  }
+  #ReSpUp .right {
+    width: 440px;
+    margin-left: 24px;
+    font-size: 18px;
+    line-height: center;
+  }
+  #ReSpUp .blue {
+    width: auto;
+    margin-left: 24px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #2276dc;
+  }
+  #ReSpUp .image {
+    width: 142px;
+    height: 132px;
+  }
+}
+
+/* tab Start */
+@media screen and (max-width : 1139px) {
+  #ReSpUp {
+    width: 100%;
+    background-color: #f0f1f2;
+  }
+  #ReSpUp .onlyForPc {
+    display: none !important;
+  }
+  #ReSpUp .reportContent {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 70px 0 24px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    background-color: white;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  #ReSpUp .reportContent .title {
+    font-size: 18px;
+    font-family: "bold";
+    line-height: 21px;
+    margin-bottom: 24px;
+  }
+  #ReSpUp .reportContent .userPhoto {
+    position: absolute;
+    top: -60px;
+    left: 24px;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ffffff;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox {
+    width: 100%;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox {
+    display: grid;
+    flex-direction: column;
+    gap: 11px;
+    width: 100%;
+    padding: 14px 24px 21px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .titlePart {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-family: "regular";
+    line-height: 19px;
+    color: #55595f;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .titlePart img {
+    width: 16px;
+    cursor: pointer;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .bodyPart {
+    font-size: 16px;
+    font-family: "medium";
+    line-height: 24px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .namePart {
+    font-size: 16px;
+    font-family: "medium";
+    line-height: 24px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .eachItemBox .emailPart {
+    font-size: 16px;
+    font-family: "medium";
+    line-height: 24px;
+    color: #2276dc;
+    text-decoration: underline;
+  }
+  #ReSpUp .reportContent .testerInformationBox .lineUp {
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    padding: 14px 0;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .testerInformationBox .left {
+    color: #55595f;
+    font-size: 12.5px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .right {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    box-sizing: border-box;
+    font-family: "Medium";
+    min-height: 36px;
+  }
+  #ReSpUp .reportContent .testerInformationBox .blue {
+    color: #2276dc;
+    display: flex;
+    align-items: center;
+    font-family: "Medium";
+    padding: 6px 0;
+    width: auto;
+    box-sizing: border-box;
+    text-decoration: underline;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon {
+    background-size: cover;
+    width: 100%;
+    background-color: #fff5da;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .mainMessage {
+    font-size: 18px;
+    font-family: "bold";
+    line-height: 27px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .subMessage {
+    margin: 16px 0 24px;
+    line-height: 21px;
+    font-family: "Regular";
+    font-size: 14px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .timeMessage {
+    display: flex;
+    margin-bottom: 6px;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: "medium";
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .timeMessage span {
+    font-family: "regular";
+    margin-left: 18px;
+    color: #2276dc;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .bodyPart .talk .messageBalloon .notificationMessage {
+    color: #828282;
+    font-size: 12px;
+    font-family: "light";
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .synthesizeOpinionBox .image {
+    width: 142px;
+    height: 132px;
+  }
+  #ReSpUp .reportContent .detectedEventBox {
+    width: 100%;
+    padding: 14px 24px 24px;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside {
+    display: grid;
+    flex-direction: column;
+    gap: 7px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .what {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-family: "medium";
+    line-height: 18px;
+    height: 34px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .circleRed {
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #c83b38;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .circleYellow {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #ffbc00;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .num {
+    font-size: 24px;
+    font-family: "Bold";
+    line-height: 36px;
+    margin: 0 auto;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .total .inside .down {
+    margin: 0 auto;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight {
+    display: flex;
+    flex-direction: column;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 12px;
+    font-family: "regular";
+    font-size: 13px;
+    line-height: normal;
+    margin: 0 0 15px auto;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine .rawDataCheckBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 0.6px solid #818181;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .rawDataLine .rawDataCheckBox.rawCheck {
+    background-color: #20315B;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+    border: 1px solid #d6d9dd;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin {
+    line-height: 18px;
+    font-size: 12px;
+    font-family: "medium";
+    height: 46px;
+    border-bottom: 1px solid #d6d9dd;
+    background-color: #fafafa;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader div, 
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin {
+    height: 10px;
+    border-bottom: none;
+    background-color: white;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .accCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+    text-align: center;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableHeader,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableMargin,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent,
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent {
+    display: grid;
+    grid-template-columns: 62% 1fr 1fr;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent {
+    height: 35px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .fillEvent .middleCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .noEvent .middleCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-left: 1px solid #d6d9dd;
+    border-right: 1px solid #d6d9dd;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore {
+    height: 40px;
+  }
+  #ReSpUp .reportContent .detectedEventBox .bodyPart .bodyRight .eventTable .tableShowMore .eventMore {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 8px 28px;
+    font-size: 13px;
+    line-height: 19px;
+    text-decoration: underline;
+    color: #2276dc;
+    cursor: pointer;
+  }
+  #ReSpUp .reportContent .detectedVideoBox {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 14px 24px 24px;
+      box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: "regular";
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo .infoItemForm {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineInfo .rightInfo .infoItemForm .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo {
+    width: 100%;
+    height: 56px;
+    border-right: 1px solid #444444;
+    border-left: 1px solid #444444;
+    margin: 16px 0 24px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .fromStartToEnd {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: "regular";
+    line-height: 15px;
+    color: #818181;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    margin-top: 26px;
+    background: rgba(140, 224, 174, 0.3);
+    overflow: hidden;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart .unitBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1px;
+    color: #aeaeae;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .unitBarPart .unitBar .columnStick {
+    width: 1px;
+    height: 21px;
+    border-left: 1px dashed #aeaeae;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .timeLinePart .timeLineGraphInfo .barGraph .eventBarPart {
+    position: absolute;
+    z-index: 9;
+    bottom: 15px;
+    left: 0;
+    display: flex;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .rightShow {
+    display: flex;
+    align-items: center;
+    font-family: "Regular";
+    font-size: 13px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 9px 16px;
+    box-sizing: border-box;
+    background-color: #f0f1f2;
+    height: 307px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .cheatingList .videoSharingButton {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+    margin: 16px auto 0;
+    font-size: 13px;
+    font-family: "medium";
+    line-height: 19px;
+    color: #2276dc;
+    /* opacity: ${(props) => (props.$clickedEvent === 0 ? "0.5" : "")}; */
+    /* cursor: ${(props) =>
+      props.$clickedEvent === 0 ? "default" : "pointer"}; */
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .videoLeftIn {
+    width: 100%;
+    height: 244px;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .videoLeftIn::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    margin-top: 100px;
+    /* display: ${(props) => (props.showScrollbar ? "" : "none")}; */
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .videoLeftIn::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 100px;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .videoLeftIn::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .videoLeftInTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bdbdbd;
+    width: 100%;
+    height: 244px;
+    overflow-x: hidden;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #ReSpUp .reportContent .detectedVideoBox .videoInfo .right {
+    width: 100%;
+  }
+  #ReSpUp .reportContent .detectedGraphBox {
+    padding: 14px 24px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    min-width: 50px;
+    height: 122px;
+    padding: 18px 0 2px 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line {
+    display: flex;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .tag {
+    font-family: "Regular";
+    font-size: 12px;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle1 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state1}; */
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle2 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state2}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle3 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state3}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle4 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state4}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .left .line .circle5 {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    /* background-color: ${(props) => props.state5}; */
+    margin-right: 8px;
+    margin: auto 8px auto 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .right {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: 48px;
+    height: 122px;
+    padding: 18px 0 2px 0;
+  }
+  #ReSpUp .reportContent .detectedGraphBox .bodyInfo .graph .right .line {
+    width: 100%;
+  }
+  #ReSpUp .reportContent .environmentForTestBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 14px 24px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .title {
+    margin-bottom: 0px;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake {
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemOne,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemTwo,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemThree,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemFour {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemOne {
+    /* color: ${(props) =>
+      props.environmentFilter === 1 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemTwo {
+    /* color: ${(props) =>
+      props.environmentFilter === 2 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemThree {
+    /* color: ${(props) =>
+      props.cameraSettingFilter === 1 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemFour {
+    /* color: ${(props) =>
+      props.cameraSettingFilter === 2 ? "#2276DC" : ""}; */
+  }
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemOne.show,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemTwo.show,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemThree.show,
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .retakeFilterItemFour.show {
+    color: #2276DC;
+  }
+
+  #ReSpUp .reportContent .environmentForTestBox .filterForRetake .middleBar {
+    width: 1px;
+    height: 12px;
+    background-color: #c4c4c4;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .photoPart {
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .photoPart .tempered {
+    width: 100%;
+    height: 66.66%;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .photoPart .tempered.detected {
+    border: 2px solid #C83B38;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .photoPart img {
+    width: 100%;
+    height: 100%;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .photoPart .photoCount {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 24px;
+    font-size: 14px;
+    font-family: "semibold";
+    line-height: 21px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
+    color: white;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .warningPart {
+    display: grid;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 12px;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .warningPart .warningText {
+    color: #c83b38;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  #ReSpUp .reportContent .environmentForTestBox .warningPart .infoText {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  #ReSpUp .viewall 
+  {
+    margin-left: 10px;
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewcheating {
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewabnormal {
+    color: #AEAEAE;
+    cursor: pointer;
+  }
+  #ReSpUp .viewall.show {
+    color: #2276DC;
+  } 
+  #ReSpUp .viewcheating.show {
+    color: #2276DC;
+  }
+  #ReSpUp .viewabnormal.show {
+    color: #2276DC;
+  }
+  #ReSpUp .greyColumn {
+    width: 1px;
+    height: 16px;
+    background-color: #c4c4c4;
+    margin: 0 12px;
+  }
+  #ReSpUp .userVideo {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    max-height: 289px;
+  }
+  #ReSpUp .upTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 19px;
+    font-family: "Bold";
+  }
+  #ReSpUp .upTitle .users {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 26px;
+    box-sizing: border-box;
+    margin-top: 38px;
+    cursor: pointer;
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    font-family: "regular";
+    line-height: 24px;
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .naming {
+    width: 188px;
+    margin-left: 10px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .counting {
+    margin: 0 20px 0 auto;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: "medium";
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage .state {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  #ReSpUp .upTitle .users .studentShowingOfThisPage img {
+    margin: 0 4px;
+  }
+  #ReSpUp .upTitle .users .studentListBox {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 494px;
+    background: #ffffff;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20.5px;
+    font-size: 16px;
+    font-family: "regular";
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage {
+    color: #2276dc;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    height: 52px;
+    line-height: 24px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .naming {
+    width: 164px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .counting {
+    margin: 0 20px 0 auto;
+  }
+  #ReSpUp .upTitle .users .studentListBox .studentOfThisPage .state {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    /* background-color: ${(props) => props.stating}; */
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing {
+    top: 52px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    margin-top: 100px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 100px;
+  }
+  #ReSpUp .upTitle .users .studentListBox .listing::-webkit-scrollbar-track {
+    border-radius: 1rem;
+  }
+  #ReSpUp .upTitle .flexing {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    line-height: 28px;
+    gap: 12px;
+  }
+  #ReSpUp .upTitle .flexing img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  #ReSpUp .underLine {
+    font-size: 13px;
+    display: flex;
+    width: 100%;
+    height: 38px;
+    line-height: 20px;
+    margin-left: 10px;
+    align-items: center;
+    color: #2276dc;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #ReSpUp .forBody {
+    width: 100%;
+    max-width: 422px;
+    margin: 0 auto;
+  }
+  #ReSpUp .lining {
+    display: grid;
+    grid-template-columns: 62% 1fr 1fr;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+  }
+  #ReSpUp .circl {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    /* background-color: ${(props) => props.detect}; */
+  }
+  #ReSpUp .body {
+    width: 100%;
+    max-width: 752px;
+    padding: 24px 24px 44px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #ReSpUp .body .up {
+    margin-bottom: 15px;
+  }
+  #ReSpUp .body .down {
+    margin: 60px 0 15px 0;
+  }
+  #ReSpUp .detectedEventBox {
+    width: 100%;
+    min-height: 268px;
+    margin-top: 24px;
+  }
+  #ReSpUp .detectedEventBox .Inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: px;
+  }
+  #ReSpUp .triangle {
+    margin: 5px auto 0;
+    width: 0;
+    height: 0;
+    border-bottom: 19.5px solid #fff5da;
+    border-top: 0px solid transparent;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+  }
+  #ReSpUp .texts {
+    position: absolute;
+    top: 46%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+  }
+  #ReSpUp .texts span {
+    color: #c83b38;
+  }
+  #ReSpUp .left {
+    width: 100%;
+  }
+  #ReSpUp .right {
+    width: 100%;
+    height: auto;
+    line-height: center;
+  }
+}
+
+@media screen and (min-width : 1140px) {
+  .StEventTable {
+    grid-template-columns: 476px 100px 100px;
+    height: 40px;
+  }
+  .StEventTable .tableSort {
+    padding: 8px 20px;
+  }
+  .StEventTable .tableSort .tableLevel {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width : 1139px) {
+  .StEventTable {
+    grid-template-columns: 62% 1fr 1fr;
+    min-height: 35px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .StEventTable .tableSort {
+    padding: 6px 14px;
+    word-break: break-all;
+  }
+  .StEventTable .tableSort .tableText {
+    flex-grow: 1;
+  }
+  .StEventTable .tableSort .tableLevel {
+    min-width: 5px;
+    height: 5px;
+    border-radius: 5px;
+  }
+}
+
+.StEventTable {
+  display: grid;
+  align-items: center;
+}
+.StEventTable .tableSort {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.StEventTable .tableSort .tableLevel {
+  box-sizing: border-box;
+}
+.StEventTable .tableSort .tableLevel.cheat {
+  background-color: #C83B38;
+}
+.StEventTable .tableSort .tableLevel.abnormal {
+  background-color: #FFBC00;
+}
+.StEventTable .tableAccCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-left: 1px solid #d6d9dd;
+  border-right: 1px solid #d6d9dd;
+  text-align: center;
+}
+.StEventTable .tableAccDuration {
+  text-align: center;
+}
+
+#StEventBar {
+  position : absolute;
+  height : 15px;
+}
+#StEventBar.eventCheat {
+  background-color: #C83B38;
+}
+#StEventBar.eventAbnormal {
+  background-color: #FFBC00;
+}
+
+.StAction {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+   padding: 10px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: "none";
+  line-height: 24px;
+}
+.StAction.clicked {
+  padding: 8px 7px;
+  border: 2px solid #5C69E0;
+}
+.StAction .action {
+  font-family: "medium";
+}
+.StAction .action.clicked {
+  font-family: "bold";
+  color: #2638D6;
+}
+.StAction .upLine {
+  color: #242424;
+}
+.StAction .buckett {
+  display: flex;
+}
+.StAction .buckett .num {
+  color: #818181;
+}
+.StAction .buckett .num.clicked {
+  color: #2638D6;
+}
+.StAction .downLine {
+  display: flex;
+  align-items: center;
+}
+.StAction .downLine .evaluate {
+  font-family: "Regular";
+}
+.StAction .downLine .evaluate.cheat {
+  color: #C83B38;
+}
+.StAction .downLine .evaluate.abnormal {
+  color: #FFBC00;
+}
+.StAction .downLine .evaluate.else {
+  color: #3C9C9C;
+}
+.StAction .downLine .greyBar {
+  width: 0.5px;
+  margin: 0 8px;
+  height: 12px;
+  background-color: #c4c4c4;
+}
+.StAction .downLine .timess {
+  color: #818181;
+}
+
+@media screen and (min-width : 1140px) {
+  .StAction {
+    height: 77px;
+    font-size: 16px;
+  }
+  .StAction .buckett {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+  }
+  .StAction .buckett .num {
+    font-family: "light";
+  }
+  .StAction .buckett .num.clicked {
+    font-family: "regular";
+  }
+  .StAction .upLine {
+    display: grid;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media screen and (max-width : 1139px) {
+  .StAction {
+    min-height: 61px;
+  }  
+  .StAction .buckett .num {
+    font-size: 13px;
+    margin-right: 8px;
+    font-family: "Regular";
+  }
+  .StAction .buckett .num.clicked {
+    font-family: "Bold";
+  }
+  .StAction .buckett .upLine {
+    font-size: 13px;
+  }
+  .StAction .buckett .downLine {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.StGraph {
+  display: flex;
+  align-items: flex-end;
+}
+.StGraph .timeGraph {
+  line-height: 18px;
+}
+.StGraph .leftGraph {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  height: 100%;
+  margin-right: 25px;
+}
+.StGraph .leftGraph .bodyParts {
+  width: 89px;
+  display: flex;
+  align-items: center;
+}
+.StGraph .leftGraph .bodyParts .bodyPart {
+  display: flex;
+  justify-content: flex;
+  margin-left: 8px;
+}
+.StGraph .leftGraph .bodyParts .redDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.StGraph .middle {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+.StGraph .middle .lineForColumn {
+  width: 1px;
+  height: 100%;
+  background-color: #e9e9e9;
+}
+.StGraph .middle .columnLineOne,
+.StGraph .middle .columnLineTwo,
+.StGraph .middle .columnLineThree,
+.StGraph .middle .columnLineFour,
+.StGraph .middle .columnLineFive {
+  position: absolute;
+  top: -20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1px;
+  height: 120%;
+}
+.StGraph .middle .columnLineOne {
+  left: 0;
+}
+.StGraph .middle .columnLineTwo {
+  left: 25%;
+}
+.StGraph .middle .columnLineThree {
+  left: 50%;
+}
+.StGraph .middle .columnLineFour {
+  left: 75%;
+}
+.StGraph .middle .columnLineFive {
+  right: 0;
+}
+.StGraph .middle .barGraph {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.StGraph .rightGraph {
+  margin-left: 25px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+@media screen and (min-width : 1140px) {
+  .StGraph {
+    margin-top: 20px;
+    height: 200px;
+  }
+  .StGraph .rightGraph {
+    text-align: end;
+  }
+  .StGraph .leftGraph {
+  }
+  .StGraph .middle {
+    width: 370px;
+  }
+}
+@media screen and (max-width : 1139px) {
+  .StGraph {
+    width: 100%;
+    margin: 50px auto 0;
+    height: 122px;
+    font-size: 12px;
+  }
+  .StGraph .leftGraph {
+    min-width: 68px;
+    width: 13%;
+    height: 100%;
+    margin-right: 7.5px;
+  }
+  .StGraph .leftGraph .bodyParts {
+    width: 68px;
+  }
+  .StGraph .leftGraph .bodyParts .bodyPart {
+  }
+  .StGraph .leftGraph .bodyParts .redDot {
+    width: 5px;
+    height: 5px;
+  }
+  .StGraph .middle {
+    flex-grow: 1;
+  }
+  .StGraph .rightGraph {
+    width: 62px;
+    margin-left: 13.5px;
+    text-align: end;
+    font-size: 11px;
+  }
+}
+
+.StBar {
+  height: 5px;
+  background-color: #008cff;
+} 
+@media screen and (min-width : 1140px) {
+  .StBar {
+    height: 10px;
+  }
+}
+
+#cameraFilter2Text {
+  font-size: 11px;
+  margin: 15px 0 0;
+  line-height: 24px;
+  color: #444;
+}
+@media screen and (min-width : 1140px) {
+  #cameraFilter2Text {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+eventSummary = [
+  {
+    "isSuccess": true,
+    "testEventSummary": {
+        "userRequireConfirm": {
+            "cheat": 4,
+            "abnormal": 0,
+            "normal": 6,
+            "notTaking": 0,
+            "analysisError": 1
+        },
+        "detectObj": {
+            "first": {
+                "level": "cheat",
+                "sort": "No one on screen (absence)",
+                "count": 4
+            },
+            "second": {
+                "level": "cheat",
+                "sort": "Recording interrupted",
+                "count": 4
+            },
+            "third": {
+                "level": "cheat",
+                "sort": "Prohibited item(s) detected",
+                "count": 3
+            },
+            "count": 23
+        }
+    }
+  }
+]

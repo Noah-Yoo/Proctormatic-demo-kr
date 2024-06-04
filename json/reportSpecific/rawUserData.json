@@ -1,0 +1,1312 @@
+rawUserData = [
+  {
+    "report": [
+      {
+        "isSuccess": true,
+        "test": {
+            "hostName": "EDINT_SOCIAL",
+            "hostEmail": "social@edint.io",
+            "testName": " CES 2024. Exhibition test 2",
+            "testStartDate": "2023-12-29 05:30:00",
+            "testEndDate": "2023-12-29 06:00:00"
+        },
+        "testReport": {
+            "status": "cheatCameraOff",
+            "isTesterSelfExit": true,
+            "uploader": {
+                "uploaderPhoto": "https://d3l86btbkpmcwl.cloudfront.net/14f20028-9588-403a-8c79-c9c23fe9dde5/601b2e92-e4b0-4f34-b6f3-7bd9d88df02d/11663/face-photo.png?Expires=1722126489&Key-Pair-Id=K2LKQZ2XZ2RPPO&Signature=GcLm0YYJmnOeGJVz9pkvNTQDDyzF75jvqm~Y0sZeGhn1zhzHJmcbzzakBtQlt2LLUQhYZKmzmeNldJP0-XQJPTHI4g1DbZe~JRIWEcwtVq1IeXM0HgBjczgq~rZxfeANamiukRwOWb9Eiw-CZS4Ynd8COfBITfHYHF0-M9Ka-ovCb8dRAaRF12nRwBstmgO5XP0GjJqBh~KkFWVTsQUkEYnVpeBJhusMdevX15DorEMixj4GmomPIvy6p4n4u22EYNIL7MwkYZLu6~pV77krikkQ5oBjqc8dnXCxQ0K2BI0xVLecerZYf~8DYElT2tuDWD9HaF5R2HSZzVGb2VxUqQ__",
+                "uploaderName": "Cho Yujin",
+                "uploaderEmail": "pppinsuni@edint.io",
+                "uploaderLocation": "Jungwon-gu - (South Korea, Seongnam-si)",
+                "finishTestTime": "2023-12-29 15:00:00",
+                "uploadVideoTime": "2023-12-29 15:00:30",
+                "isTamperedVideo": false
+            },
+            "conclusion": {
+                "check": "cheat",
+                "cheatCount": 5,
+                "abnormalCount": 1,
+                "cameraOffCount": 1
+            },
+            "history": {
+                "summary": {
+                    "totalEventCount": 15,
+                    "cheatEventCount": 5,
+                    "abnormalEventCount": 10
+                },
+                "table": [
+                    {
+                        "sort": "No one on screen (absence)",
+                        "level": "cheat",
+                        "accCount": 2,
+                        "accDuration": 33
+                    },
+                    {
+                        "sort": "Recording interrupted",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 167
+                    },
+                    {
+                        "sort": "Gazing into the camera",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 5
+                    },
+                    {
+                        "sort": "Face not visible",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 4
+                    },
+                    {
+                        "sort": "Moving head",
+                        "level": "abnormal",
+                        "accCount": 3,
+                        "accDuration": 12
+                    },
+                    {
+                        "sort": "Raising hand",
+                        "level": "abnormal",
+                        "accCount": 3,
+                        "accDuration": 7
+                    },
+                    {
+                        "sort": "Face not visible",
+                        "level": "abnormal",
+                        "accCount": 2,
+                        "accDuration": 4
+                    },
+                    {
+                        "sort": "Gazing into the camera",
+                        "level": "abnormal",
+                        "accCount": 1,
+                        "accDuration": 3
+                    },
+                    {
+                        "sort": "Loud noise detected",
+                        "level": "abnormal",
+                        "accCount": 1,
+                        "accDuration": 2
+                    }
+                ]
+            },
+            "timeline": {
+                "testStartTime": "2023-12-29 14:30:00",
+                "testEndTime": "2023-12-29 15:00:00",
+                "testVideoLength": "1790.1",
+                "timelineTable": [
+                    {
+                        "level": "cheat",
+                        "startTime": 92,
+                        "endTime": 110
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 110,
+                        "endTime": 112
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 113,
+                        "endTime": 115
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 211,
+                        "endTime": 215
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 216,
+                        "endTime": 231
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 231,
+                        "endTime": 233
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 352,
+                        "endTime": 519
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 520,
+                        "endTime": 524
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 565,
+                        "endTime": 567
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 738,
+                        "endTime": 742
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 739,
+                        "endTime": 742
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1294,
+                        "endTime": 1296
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1601,
+                        "endTime": 1603
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1769,
+                        "endTime": 1773
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 1770,
+                        "endTime": 1775
+                    }
+                ]
+            },
+            "timetable": [
+                {
+                    "level": "cheat",
+                    "sort": "No one on screen (absence)",
+                    "timestamp": "01:32",
+                    "startTime": 92,
+                    "endTime": 110
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Face not visible",
+                    "timestamp": "01:50",
+                    "startTime": 110,
+                    "endTime": 112
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Loud noise detected",
+                    "timestamp": "01:53",
+                    "startTime": 113,
+                    "endTime": 115
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Face not visible",
+                    "timestamp": "03:31",
+                    "startTime": 211,
+                    "endTime": 215
+                },
+                {
+                    "level": "cheat",
+                    "sort": "No one on screen (absence)",
+                    "timestamp": "03:36",
+                    "startTime": 216,
+                    "endTime": 231
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Face not visible",
+                    "timestamp": "03:51",
+                    "startTime": 231,
+                    "endTime": 233
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Recording interrupted",
+                    "timestamp": "05:52",
+                    "startTime": 352,
+                    "endTime": 519
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "08:40",
+                    "startTime": 520,
+                    "endTime": 524
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "09:25",
+                    "startTime": 565,
+                    "endTime": 567
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "12:18",
+                    "startTime": 738,
+                    "endTime": 742
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Gazing into the camera",
+                    "timestamp": "12:19",
+                    "startTime": 739,
+                    "endTime": 742
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "21:34",
+                    "startTime": 1294,
+                    "endTime": 1296
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "26:41",
+                    "startTime": 1601,
+                    "endTime": 1603
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "29:29",
+                    "startTime": 1769,
+                    "endTime": 1773
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Gazing into the camera",
+                    "timestamp": "29:30",
+                    "startTime": 1770,
+                    "endTime": 1775
+                }
+            ],
+            "analysis": [
+                {
+                    "part": "Others",
+                    "partKr": "기타",
+                    "level": "cheat",
+                    "count": 2,
+                    "accDuration": 169
+                },
+                {
+                    "part": "Body",
+                    "partKr": "몸",
+                    "level": "cheat",
+                    "count": 2,
+                    "accDuration": 33
+                },
+                {
+                    "part": "Face",
+                    "partKr": "얼굴",
+                    "level": "cheat",
+                    "count": 8,
+                    "accDuration": 29
+                },
+                {
+                    "part": "Hand/Arm",
+                    "partKr": "손 / 팔",
+                    "level": "abnormal",
+                    "count": 3,
+                    "accDuration": 7
+                },
+                {
+                    "part": "Item",
+                    "partKr": "사물",
+                    "level": "normal",
+                    "count": 0,
+                    "accDuration": 0
+                }
+            ]
+        }
+      },
+      {
+        "isSuccess": true,
+        "test": {
+            "hostName": "EDINT_SOCIAL",
+            "hostEmail": "social@edint.io",
+            "testName": " CES 2024. Exhibition test 2",
+            "testStartDate": "2023-12-29 05:30:00",
+            "testEndDate": "2023-12-29 06:00:00"
+        },
+        "testReport": {
+            "status": "cheatCameraOff",
+            "isTesterSelfExit": true,
+            "uploader": {
+                "uploaderPhoto": "https://d3l86btbkpmcwl.cloudfront.net/14f20028-9588-403a-8c79-c9c23fe9dde5/601b2e92-e4b0-4f34-b6f3-7bd9d88df02d/11666/face-photo.png?Expires=1722128220&Key-Pair-Id=K2LKQZ2XZ2RPPO&Signature=KPXmIcsvnIf65xCYR24hICdCAHl1RsyLcQ1jzGlst1wSyfhCoSDw1xBOWHzLodB5fk4KSoYHCd~Z2xXfAdjZXwnViiGCDXG2i5ImOhdnjsh~ILq-DGgawLrzPmlUwWXmfPhW9gmBoECxaIX6pp3wvyy-RsiPkrOOSyhnTJPpjar3piPw1Dr2nXhVo1amb48JjBU2MPXeQ--DYj1mYHQovbbx2aGkOaDfbicqSEVwE3wvbKcsYMRKNzwtUHR4JxL2pm9NDdu08cDzw0hCYorbuypf2RwzsE~1FjtZFiOFWo~bRPihcDit50WfqHPhmS~HrNdgyy-EUQTbtljJLPdg8Q__",
+                "uploaderName": "Kang seokwoo",
+                "uploaderEmail": "swoo1429@gmail.com",
+                "uploaderLocation": "- - (-, -)",
+                "finishTestTime": "2023-12-29 14:59:58",
+                "uploadVideoTime": "2023-12-29 15:03:02",
+                "isTamperedVideo": false
+            },
+            "conclusion": {
+                "check": "cheat",
+                "cheatCount": 5,
+                "abnormalCount": 0,
+                "cameraOffCount": 1
+            },
+            "history": {
+                "summary": {
+                    "totalEventCount": 35,
+                    "cheatEventCount": 5,
+                    "abnormalEventCount": 30
+                },
+                "table": [
+                    {
+                        "sort": "No one on screen (absence)",
+                        "level": "cheat",
+                        "accCount": 2,
+                        "accDuration": 160
+                    },
+                    {
+                        "sort": "Recording interrupted",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 119
+                    },
+                    {
+                        "sort": "Prohibited item(s) detected",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 25
+                    },
+                    {
+                        "sort": "Face not visible",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 9
+                    },
+                    {
+                        "sort": "Moving head",
+                        "level": "abnormal",
+                        "accCount": 19,
+                        "accDuration": 102
+                    },
+                    {
+                        "sort": "Raising hand",
+                        "level": "abnormal",
+                        "accCount": 10,
+                        "accDuration": 56
+                    },
+                    {
+                        "sort": "Face not visible",
+                        "level": "abnormal",
+                        "accCount": 1,
+                        "accDuration": 3
+                    }
+                ]
+            },
+            "timeline": {
+                "testStartTime": "2023-12-29 14:30:00",
+                "testEndTime": "2023-12-29 14:59:58",
+                "testVideoLength": "1793.2",
+                "timelineTable": [
+                    {
+                        "level": "abnormal",
+                        "startTime": 0,
+                        "endTime": 2
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 0,
+                        "endTime": 2
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 6,
+                        "endTime": 10
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 13,
+                        "endTime": 20
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 13,
+                        "endTime": 21
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 67,
+                        "endTime": 71
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 91,
+                        "endTime": 101
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 113,
+                        "endTime": 117
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 143,
+                        "endTime": 147
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 197,
+                        "endTime": 202
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 246,
+                        "endTime": 248
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 269,
+                        "endTime": 273
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 306,
+                        "endTime": 309
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 358,
+                        "endTime": 363
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 370,
+                        "endTime": 373
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 384,
+                        "endTime": 387
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 428,
+                        "endTime": 433
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 473,
+                        "endTime": 479
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 474,
+                        "endTime": 476
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 646,
+                        "endTime": 776
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 776,
+                        "endTime": 785
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 942,
+                        "endTime": 946
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 957,
+                        "endTime": 965
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 984,
+                        "endTime": 986
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1081,
+                        "endTime": 1083
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 1208,
+                        "endTime": 1327
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1398,
+                        "endTime": 1408
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1415,
+                        "endTime": 1422
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1441,
+                        "endTime": 1444
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1453,
+                        "endTime": 1463
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1467,
+                        "endTime": 1484
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 1615,
+                        "endTime": 1645
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 1619,
+                        "endTime": 1644
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1645,
+                        "endTime": 1648
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1746,
+                        "endTime": 1751
+                    }
+                ]
+            },
+            "timetable": [
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "00:00",
+                    "startTime": 0,
+                    "endTime": 2
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "00:00",
+                    "startTime": 0,
+                    "endTime": 2
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "00:06",
+                    "startTime": 6,
+                    "endTime": 10
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "00:13",
+                    "startTime": 13,
+                    "endTime": 20
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "00:13",
+                    "startTime": 13,
+                    "endTime": 21
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "01:07",
+                    "startTime": 67,
+                    "endTime": 71
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "01:31",
+                    "startTime": 91,
+                    "endTime": 101
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "01:53",
+                    "startTime": 113,
+                    "endTime": 117
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "02:23",
+                    "startTime": 143,
+                    "endTime": 147
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "03:17",
+                    "startTime": 197,
+                    "endTime": 202
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "04:06",
+                    "startTime": 246,
+                    "endTime": 248
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "04:29",
+                    "startTime": 269,
+                    "endTime": 273
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "05:06",
+                    "startTime": 306,
+                    "endTime": 309
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "05:58",
+                    "startTime": 358,
+                    "endTime": 363
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "06:10",
+                    "startTime": 370,
+                    "endTime": 373
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "06:24",
+                    "startTime": 384,
+                    "endTime": 387
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "07:08",
+                    "startTime": 428,
+                    "endTime": 433
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "07:53",
+                    "startTime": 473,
+                    "endTime": 479
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "07:54",
+                    "startTime": 474,
+                    "endTime": 476
+                },
+                {
+                    "level": "cheat",
+                    "sort": "No one on screen (absence)",
+                    "timestamp": "10:46",
+                    "startTime": 646,
+                    "endTime": 776
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Face not visible",
+                    "timestamp": "12:56",
+                    "startTime": 776,
+                    "endTime": 785
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "15:42",
+                    "startTime": 942,
+                    "endTime": 946
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "15:57",
+                    "startTime": 957,
+                    "endTime": 965
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "16:24",
+                    "startTime": 984,
+                    "endTime": 986
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "18:01",
+                    "startTime": 1081,
+                    "endTime": 1083
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Recording interrupted",
+                    "timestamp": "20:08",
+                    "startTime": 1208,
+                    "endTime": 1327
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "23:18",
+                    "startTime": 1398,
+                    "endTime": 1408
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "23:35",
+                    "startTime": 1415,
+                    "endTime": 1422
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "24:01",
+                    "startTime": 1441,
+                    "endTime": 1444
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "24:13",
+                    "startTime": 1453,
+                    "endTime": 1463
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "24:27",
+                    "startTime": 1467,
+                    "endTime": 1484
+                },
+                {
+                    "level": "cheat",
+                    "sort": "No one on screen (absence)",
+                    "timestamp": "26:55",
+                    "startTime": 1615,
+                    "endTime": 1645
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Prohibited item(s) detected",
+                    "timestamp": "26:59",
+                    "startTime": 1619,
+                    "endTime": 1644,
+                    "detectedItem": "[book]"
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Face not visible",
+                    "timestamp": "27:25",
+                    "startTime": 1645,
+                    "endTime": 1648
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "29:06",
+                    "startTime": 1746,
+                    "endTime": 1751
+                }
+            ],
+            "analysis": [
+                {
+                    "part": "Body",
+                    "partKr": "몸",
+                    "level": "cheat",
+                    "count": 2,
+                    "accDuration": 160
+                },
+                {
+                    "part": "Others",
+                    "partKr": "기타",
+                    "level": "cheat",
+                    "count": 1,
+                    "accDuration": 119
+                },
+                {
+                    "part": "Face",
+                    "partKr": "얼굴",
+                    "level": "cheat",
+                    "count": 21,
+                    "accDuration": 114
+                },
+                {
+                    "part": "Item",
+                    "partKr": "사물",
+                    "level": "cheat",
+                    "count": 1,
+                    "accDuration": 25
+                },
+                {
+                    "part": "Hand/Arm",
+                    "partKr": "손 / 팔",
+                    "level": "abnormal",
+                    "count": 10,
+                    "accDuration": 56
+                }
+            ]
+        }
+      },
+      {
+        "isSuccess": true,
+        "test": {
+            "hostName": "EDINT_SOCIAL",
+            "hostEmail": "social@edint.io",
+            "testName": " CES 2024. Exhibition test 2",
+            "testStartDate": "2023-12-29 05:30:00",
+            "testEndDate": "2023-12-29 06:00:00"
+        },
+        "testReport": {
+            "status": "cheatCameraOff",
+            "isTesterSelfExit": true,
+            "uploader": {
+                "uploaderPhoto": "https://d3l86btbkpmcwl.cloudfront.net/14f20028-9588-403a-8c79-c9c23fe9dde5/601b2e92-e4b0-4f34-b6f3-7bd9d88df02d/11661/face-photo.png?Expires=1722128951&Key-Pair-Id=K2LKQZ2XZ2RPPO&Signature=cp5sDNfnx7xcAxyFVEPD4pad9ZLePNjTdY3BjCmGrmDb-Uhp-bglWlUkYslGqM1fm8w2iElIwa-lRbmXhGjCMxX6PB2B4LrGofsiZSTDTBte7zcqlaLoZWKiJehMNxHtZ8jS0zG4n9ZRGN9yUcJlOFXODnPcR-QhgQANTDqieEaH4CJYDokvN1ALyJX3u1lyUdppak5-nQsJUZRlKyHtvXQSPpxs4jDZZcTfu81bhPKtzeZRh~x6qeUzgra2dZD-7P0op3UVIXhID4shU2poJPcZeYVip9P0jABm6ZbIGcvZa9UZ7qFG8f0tfS0uXRS-E3FGoZdUoGzYiTQg7WBxEw__",
+                "uploaderName": "Shin Hohwan",
+                "uploaderEmail": "hohwan@edint.io",
+                "uploaderLocation": "- - (-, -)",
+                "finishTestTime": "2023-12-29 14:59:57",
+                "uploadVideoTime": "2023-12-29 15:00:37",
+                "isTamperedVideo": false
+            },
+            "conclusion": {
+                "check": "cheat",
+                "cheatCount": 3,
+                "abnormalCount": 1,
+                "cameraOffCount": 1
+            },
+            "history": {
+                "summary": {
+                    "totalEventCount": 27,
+                    "cheatEventCount": 3,
+                    "abnormalEventCount": 24
+                },
+                "table": [
+                    {
+                        "sort": "Prohibited item(s) detected",
+                        "level": "cheat",
+                        "accCount": 2,
+                        "accDuration": 94
+                    },
+                    {
+                        "sort": "Recording interrupted",
+                        "level": "cheat",
+                        "accCount": 1,
+                        "accDuration": 113
+                    },
+                    {
+                        "sort": "Raising hand",
+                        "level": "abnormal",
+                        "accCount": 20,
+                        "accDuration": 213
+                    },
+                    {
+                        "sort": "Moving head",
+                        "level": "abnormal",
+                        "accCount": 3,
+                        "accDuration": 10
+                    },
+                    {
+                        "sort": "Loud noise detected",
+                        "level": "abnormal",
+                        "accCount": 1,
+                        "accDuration": 2
+                    }
+                ]
+            },
+            "timeline": {
+                "testStartTime": "2023-12-29 14:30:00",
+                "testEndTime": "2023-12-29 14:59:57",
+                "testVideoLength": "1786.0",
+                "timelineTable": [
+                    {
+                        "level": "abnormal",
+                        "startTime": 16,
+                        "endTime": 32
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 16,
+                        "endTime": 34
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 128,
+                        "endTime": 241
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 241,
+                        "endTime": 243
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 264,
+                        "endTime": 267
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 268,
+                        "endTime": 271
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 338,
+                        "endTime": 340
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 468,
+                        "endTime": 470
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 605,
+                        "endTime": 607
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 667,
+                        "endTime": 669
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 759,
+                        "endTime": 836
+                    },
+                    {
+                        "level": "cheat",
+                        "startTime": 759,
+                        "endTime": 835
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1035,
+                        "endTime": 1037
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1146,
+                        "endTime": 1149
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1369,
+                        "endTime": 1371
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1386,
+                        "endTime": 1389
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1557,
+                        "endTime": 1559
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1560,
+                        "endTime": 1562
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1586,
+                        "endTime": 1636
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1637,
+                        "endTime": 1648
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1650,
+                        "endTime": 1659
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1667,
+                        "endTime": 1676
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1676,
+                        "endTime": 1681
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1685,
+                        "endTime": 1692
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1698,
+                        "endTime": 1700
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1756,
+                        "endTime": 1758
+                    },
+                    {
+                        "level": "abnormal",
+                        "startTime": 1782,
+                        "endTime": 1784
+                    }
+                ]
+            },
+            "timetable": [
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "00:16",
+                    "startTime": 16,
+                    "endTime": 32
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Prohibited item(s) detected",
+                    "timestamp": "00:16",
+                    "startTime": 16,
+                    "endTime": 34,
+                    "detectedItem": "[phone]"
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Recording interrupted",
+                    "timestamp": "02:08",
+                    "startTime": 128,
+                    "endTime": 241
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Loud noise detected",
+                    "timestamp": "04:01",
+                    "startTime": 241,
+                    "endTime": 243
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "04:24",
+                    "startTime": 264,
+                    "endTime": 267
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "04:28",
+                    "startTime": 268,
+                    "endTime": 271
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "05:38",
+                    "startTime": 338,
+                    "endTime": 340
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "07:48",
+                    "startTime": 468,
+                    "endTime": 470
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "10:05",
+                    "startTime": 605,
+                    "endTime": 607
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "11:07",
+                    "startTime": 667,
+                    "endTime": 669
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "12:39",
+                    "startTime": 759,
+                    "endTime": 836
+                },
+                {
+                    "level": "cheat",
+                    "sort": "Prohibited item(s) detected",
+                    "timestamp": "12:39",
+                    "startTime": 759,
+                    "endTime": 835,
+                    "detectedItem": "[phone]"
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "17:15",
+                    "startTime": 1035,
+                    "endTime": 1037
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "19:06",
+                    "startTime": 1146,
+                    "endTime": 1149
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "22:49",
+                    "startTime": 1369,
+                    "endTime": 1371
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "23:06",
+                    "startTime": 1386,
+                    "endTime": 1389
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "25:57",
+                    "startTime": 1557,
+                    "endTime": 1559
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "26:00",
+                    "startTime": 1560,
+                    "endTime": 1562
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "26:26",
+                    "startTime": 1586,
+                    "endTime": 1636
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "27:17",
+                    "startTime": 1637,
+                    "endTime": 1648
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "27:30",
+                    "startTime": 1650,
+                    "endTime": 1659
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "27:47",
+                    "startTime": 1667,
+                    "endTime": 1676
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "27:56",
+                    "startTime": 1676,
+                    "endTime": 1681
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "28:05",
+                    "startTime": 1685,
+                    "endTime": 1692
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "28:18",
+                    "startTime": 1698,
+                    "endTime": 1700
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Raising hand",
+                    "timestamp": "29:16",
+                    "startTime": 1756,
+                    "endTime": 1758
+                },
+                {
+                    "level": "abnormal",
+                    "sort": "Moving head",
+                    "timestamp": "29:42",
+                    "startTime": 1782,
+                    "endTime": 1784
+                }
+            ],
+            "analysis": [
+                {
+                    "part": "Others",
+                    "partKr": "기타",
+                    "level": "cheat",
+                    "count": 2,
+                    "accDuration": 115
+                },
+                {
+                    "part": "Item",
+                    "partKr": "사물",
+                    "level": "cheat",
+                    "count": 2,
+                    "accDuration": 94
+                },
+                {
+                    "part": "Hand/Arm",
+                    "partKr": "손 / 팔",
+                    "level": "abnormal",
+                    "count": 20,
+                    "accDuration": 213
+                },
+                {
+                    "part": "Face",
+                    "partKr": "얼굴",
+                    "level": "abnormal",
+                    "count": 3,
+                    "accDuration": 10
+                },
+                {
+                    "part": "Body",
+                    "partKr": "몸",
+                    "level": "normal",
+                    "count": 0,
+                    "accDuration": 0
+                }
+            ]
+        }
+      },
+      
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+judgeSummary = [
+  {
+    "isSuccess": true,
+    "judgeSummary": {
+        "testName": " CES 2024. Exhibition test 2",
+        "testStartTime": "2023-12-29 14:30",
+        "testEndTime": "2023-12-29 15:00",
+        "testFinishTime": "2024-01-02 17:50",
+        "isTesterSelfExit": true,
+        "testPlannedTester": 15,
+        "testActualTester": 11,
+        "isReActivateAroundSetting": false,
+        "testComment": " CES 2024. Half participated normally",
+        "uploaded": 11,
+        "step": "afterSendMail",
+        "progress": "100"
+    }
+  }
+]

@@ -1,0 +1,669 @@
+#StMyExam {
+    min-height: calc(100vh - 353px);
+}
+
+@media screen and (max-width : 1139px) {
+    #StBodyUp {
+        display: flex;
+        width: 100%;
+        max-width: 752px;
+        margin: 0 auto 0 auto;
+    }
+    #StBodyUp .flexing {
+        display: flex;
+        align-items: center;
+    }
+    #StBodyUp .space {
+        display: flex;
+        flex-direction: column;
+    }
+    #StBodyUp .line {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* min-width : 332px; */
+        min-height: 55px;
+        padding: 14px 0px;
+    }
+    #StBodyUp .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #StBodyUp .columnLine {
+        width: 1px;
+        height: 58px;
+        background-color: #d6d4cf;
+    }
+    #StBodyUp .processUp {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: "Medium";
+    }
+    #StBodyUp .processDown {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        font-family: "medium";
+        line-height: 33px;
+    }
+    #StBodyUp .processIn {
+        display: grid;
+        flex-direction: column;
+        gap: 7px;
+        width: 100%;
+        /* height : 64px; */
+    }
+    #StBodyUp .processBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        width: 100%;
+        height: 106px;
+        border: 1px solid #d6d4cf;
+        border-radius: 12px;
+        padding: 24px 0;
+        box-sizing: border-box;
+        margin: 44px auto 0;
+    }
+    #StBodyUp .st36 {
+        font-size: 26px;
+        margin-bottom: 44px;
+        font-family: "Medium";
+    }
+    #StBodyUp .st28 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "bold";
+        font-size: 19px;
+        margin-bottom: 30px;
+        margin-top: 8px;
+        padding: 16px 0px;
+    }
+    #StBodyUp .infoBlack {
+        /* height : 36px; */
+        font-family: "Medium";
+        margin: 11px 0 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #StBodyUp .infoBlue {
+        font-family: "Medium";
+        margin: 11px 0 6px;
+        font-size: 16px;
+        color: #2276dc;
+        line-height: 24px;
+    }
+    #StBodyUp .infoLeft {
+        width: 130px;
+        font-family: "Regular";
+        font-size: 13px;
+        line-height: 19px;
+        color: #55595f;
+    }
+    #StBodyUp .examInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #StBodyUp .inBox {
+        width: 100%;
+        padding: 24px 24px 28px;
+        box-sizing: border-box;
+    }
+    #StBodyUp .titleBox {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
+        gap: 12px;
+        line-height: 28px;
+        font-size: 19px;
+        font-family: "bold";
+        margin-bottom: 46px;
+    }
+}
+
+@media screen and (min-width : 1140px) {
+    #StBodyUp {
+        display: flex;
+        width: 1228px;
+        margin: 0 auto 0 auto;
+        padding-top: 80px;
+    }
+    #StBodyUp .flexing {
+        display: flex;
+    }
+    #StBodyUp .titleBox {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
+        gap: 19px;
+        font-size: 28px;
+        font-family: "bold";
+        line-height: 41px;
+        margin-bottom: 60px;
+    }
+    #StBodyUp .space {
+        display: flex;
+        justify-content: space-between;
+    }
+    #StBodyUp .line {
+        display: grid;
+        grid-template-columns: 112px 420px;
+        gap: 100px;
+        align-items: center;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    #StBodyUp .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #StBodyUp .columnLine {
+        width: 0.5px;
+        height: 59px;
+        background-color: #bdbdbd;
+    }
+    #StBodyUp .processUp {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        line-height: 19px;
+        font-family: "Medium";
+    }
+    #StBodyUp .processDown {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        line-height: 33px;
+        font-family: "Medium";
+    }
+    #StBodyUp .processIn {
+        display: grid;
+        flex-direction: column;
+        margin: auto;
+        gap: 7px;
+    }
+    #StBodyUp .processBox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        width: 524px;
+        /* height: 106px; */
+        padding: 28px 0;
+        box-sizing: border-box;
+        border: 1px solid #d6d4cf;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+    #StBodyUp .st36 {
+        font-size: 35px;
+        margin: 0 0 50px 0;
+        font-family: "Medium";
+        line-height: 52px;
+    }
+    #StBodyUp .st28 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        font-size: 28px;
+        font-family: "Bold";
+        margin: 0 0 60px 0;
+    }
+    #StBodyUp .infoBlack {
+        font-size: 18px;
+    }
+    #StBodyUp .infoBlue {
+        font-size: 18px;
+        color: #2276dc;
+    }
+    #StBodyUp .infoLeft {
+        /* width : 130px; */
+        font-family: "Medium";
+        font-size: 18px;
+        /* margin-bottom: auto; */
+    }
+    #StBodyUp .examInfo {
+        display: grid;
+        line-height: 27px;
+        grid-template-rows: 27px 27px;
+        /* justify-content: space-between; */
+        gap: 12.5px;
+        /* min-height: 104px; */
+    }
+    #StBodyUp .inBox {
+        width: 1400px;
+    }
+}
+
+@media screen and (max-width : 1139px) {
+    #StBodyDown {
+        width: 100%;
+        max-width: 752px;
+        margin: 0 auto 20px auto;
+        padding: 0 24px 24px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #StBodyDown .nothing {
+        display: flex;
+        width: 100%;
+        height: 90px;
+        justify-content: center;
+        align-items: center;
+        color: #bdbdbd;
+        font-size: 14px;
+    }
+    #StBodyDown .in {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 4px;
+    }
+    #StBodyDown .boxs {
+        margin-top: 16px;
+    }
+    #StBodyDown .titleBox {
+        display: flex;
+        align-items: center;
+    }
+    #StBodyDown .titleBox2 {
+        display: flex;
+        align-items: center;
+        margin-top: 44px;
+    }
+    #StBodyDown .titleBox3 {
+        display: flex;
+        align-items: center;
+        margin-top: 44px;
+    }
+    #StBodyDown .toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 11px;
+        height: 11px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    #StBodyDown .title {
+        font-size: 18px;
+        line-height: 21px;
+        font-family: "Bold";
+    }
+    #StBodyDown .box {
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+        background-color: #f0f1f2;
+        border-radius: 0px 12px 12px 12px;
+    }
+    #StBodyDown .headBox {
+        width: 300px;
+        overflow: hidden;
+        border-radius: 10px 0px 0 0;
+    }
+    #StBodyDown .rotate {
+        font-size: 12.5px;
+        line-height: 15px;
+        color: #55595f;
+        margin-left: 10px;
+        transform: skew(-30deg);
+        margin-top: 13.5px;
+    }
+    #StBodyDown .head {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* align-items: center; */
+        /* line-height: 50px; */
+        width: 190px;
+        height: 34px;
+        border-radius: 10px 10px 0 0;
+        background: #f0f1f2;
+        transform: skew(30deg) translate(-30px, 0px);
+    }
+}
+  @media screen and (min-width : 640px) and (max-width : 1139px) {
+    #StBodyDown .boxs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+  @media screen and (max-width : 639px) {
+    #StBodyDown .boxs {
+      display: grid;
+      /* flex-direction: column; */
+      gap: 16px;
+    }
+  }
+  @media screen and (min-width : 1140px) {
+    #StBodyDown {
+        width: 1228px;
+        margin: 60px auto 80px auto;
+    }
+    #StBodyDown .nothing {
+      display: flex;
+      width: 100%;
+      height: 90px;
+      justify-content: center;
+      align-items: center;
+      color: #bdbdbd;
+      font-size: 18px;
+    }
+    #StBodyDown .boxs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 19px;
+      margin-top: 24px;
+    }
+    #StBodyDown .titleBox2,
+    #StBodyDown .titleBox3,
+    #StBodyDown .titleBox {
+      display: flex;
+      align-items: center;
+      line-height: 33px;
+    }
+    #StBodyDown .toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 15px;
+      cursor: pointer;
+    }
+    #StBodyDown .title {
+      font-family: "Bold";
+      font-size: 22px;
+    }
+    #StBodyDown .body {
+      width: 1118px;
+      padding: 55px;
+      background-color: #fafafa;
+    }
+    #StBodyDown .box {
+      display: grid;
+      flex-direction: column;
+      gap: 60px;
+      width: 1118px;
+      padding: 55px;
+      background-color: #f0f1f2;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    #StBodyDown .headBox {
+      width: 300px;
+      overflow: hidden;
+      border-radius: 10px 0px 0 0;
+    }
+    #StBodyDown .rotate {
+      color: #242424;
+      margin-left: 20px;
+      transform: skew(-30deg);
+    }
+    #StBodyDown .head {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      line-height: 50px;
+      width: 244px;
+      height: 50px;
+      border-radius: 10px 10px 0 0;
+      background: #f0f1f2;
+      transform: skew(30deg) translate(-30px, 0px);
+    }
+}
+
+@media screen and (min-width : 1140px) {
+    .StBox {
+      position: relative;
+      width: 300px;
+      height: 245px;
+      padding: 30px;
+      /* background: ${(props) =>
+      props.step === "beforeAnalysis" || props.step === "analyzing"
+          ? "#FFF6A3"
+          : "#FFFFFF"}; */
+      background : #FFFFFF;
+      box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .StBox.before {
+      background: #FFF6A3;
+    }
+
+    .StBox .buttonss {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+    }
+    .StBox .clicked {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      cursor: default;
+    }
+    .StBox .clicked .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+    }
+    .StBox .clicked .inButton {
+      width: 149px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 43px;
+      font-family: "Medium";
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .StBox .test {
+      height: 56px;
+      font-size: 19px;
+      font-family: "Medium";
+      line-height: 28px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      white-space: normal;
+      word-break: break-all;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .StBox .font12 {
+      font-family: "Medium";
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .StBox .grey {
+      font-family: "Regular";
+      font-size: 14px;
+      line-height: 21px;
+      color: #818181;
+    }
+    .StBox .write {
+      display: grid;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 25px;
+      line-height: 21px;
+      gap: 4px;
+    }
+    .StBox .write .simple12 {
+      font-family: "Regular";
+      font-size: 14px;
+      width: 108px;
+    }
+    .StBox .write .writeLine {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+    }
+    .StBox .blue {
+      font-family: "Medium";
+      font-size: 13.5px;
+      color: #2276dc;
+    }
+    .StBox .progress {
+      font-family: "Medium";
+      font-size: 13.5px;
+      /* color: ${(props) => (props.step === 5 ? "#C83B38" : "#2276DC")}; */
+      color: #2276DC;
+    }
+  }
+  @media screen and (max-width : 639px) {
+    /* width : 264px; */
+    .StBox {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width : 640px) and (max-width : 1139px) {
+    .StBox {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width : 1139px) {
+    .StBox {
+      position: relative;
+      height: 212px;
+      padding: 24px;
+      box-sizing: border-box;
+      /* background: ${(props) =>
+        props.step === "beforeAnalysis" || props.step === "analyzing"
+          ? "#FFF6A3"
+          : "#FFFFFF"}; */
+      background: #FFFFFF;
+      box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .StBox .clicked {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      cursor: default;
+    }
+    .StBox .clicked .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+    }
+    .StBox .clicked .buttonss {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+    }
+    .StBox .clicked .inButton {
+      width: 151px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 43px;
+      cursor: pointer;
+    }
+    .StBox .mobile {
+      display: none !important;
+    }
+    .StBox .test {
+      font-size: 16px;
+      font-family: "Medium";
+      line-height: 24px;
+      height: 48px;
+      margin: 0 0 20px 0;
+      overflow: hidden;
+      white-space: normal;
+      display: -webkit-box;
+      word-break: break-all;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .StBox .font12 {
+      font-family: "Medium";
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .StBox .grey {
+      font-family: "Regular";
+      font-size: 11.5px;
+      line-height: 18px;
+      color: #818181;
+    }
+    .StBox .write {
+      display: grid;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px 0 0 0;
+      gap: 4px;
+    }
+    .StBox .write .writeLine {
+      display: flex;
+      align-items: center;
+      line-height: 18px;
+    }
+    .StBox .simple12 {
+      font-family: "Regular";
+      font-size: 12px;
+      width: 92px;
+      margin: 0 15px 0 0;
+    }
+    .StBox .blue {
+      font-family: "medium";
+      font-size: 12px;
+      color: #2276dc;
+    }
+    .StBox .progress {
+      font-family: "Regular";
+      font-size: 12px;
+      /* color: ${(props) => (props.step === 5 ? "#C83B38" : "#2276DC")}; */
+      color: #2276DC;
+    }
+  }
+
+.StLine {
+  display: flex;
+  align-items: center;
+}

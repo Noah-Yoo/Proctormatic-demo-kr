@@ -1,0 +1,734 @@
+@media screen and (max-width : 1139px) {
+  #StReport {
+      width: 100%;
+      margin: 0 auto;
+      background-color: #f0f1f2;
+  }
+  #StReport .wrapper {
+      width: 100%;
+      max-width: 752px;
+      margin: 0 auto;
+  }
+}
+@media screen and (min-width : 1140px) {
+  #StReport {
+      width: 100%;
+  }
+}
+
+@media screen and (min-width : 1140px) {
+  #StBackUp {
+    width: 100%;
+    max-width: 100%;
+    background-color: #f0f1f2;
+  }
+  #StBackUp .onlyForMobile {
+    display: none;
+  }
+  #StBackUp .noEvent {
+    color: #bdbdbd;
+  }
+  #StBackUp .rounding {
+    width: 5px;
+    height: 5px;
+    margin: auto 10px auto 0;
+    border-radius: 5px;
+    background-color: #55595f;
+  }
+  #StBackUp .nothing {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    color: #bdbdbd;
+  }
+  #StBackUp .line3 {
+    display: none;
+  }
+  #StBackUp .gLine {
+    display: none;
+  }
+  #StBackUp .flexing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  #StBackUp .columning {
+    display: flex;
+  }
+  #StBackUp .body {
+    width: 1228px;
+    padding-top: 80px;
+    margin: 0 auto 0 auto;
+    background-color: #f0f1f2;
+  }
+  #StBackUp .body .up {
+
+  }
+  #StBackUp .body .down {
+    margin: 60px 0 15px 0;
+  }
+  #StBackUp .body .titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    font-family: "Bold";
+  }
+  #StBackUp .body .titleBox .title {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 19px;
+    line-height: 41px;
+  }
+  #StBackUp .body .titleBox .title .imgPart {
+    display: flex;
+    align-items: center;
+  }
+  #StBackUp .body .titleBox .title .imgPart .arrow {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  #StBackUp .body .titleBox .deleteIcon {
+    position: relative;
+  }
+  #StBackUp .body .titleBox .deleteIcon .deleteButton {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 52px;
+    font-size: 16px;
+    font-family: "regular";
+    line-height: 24px;
+    position: absolute;
+    z-index: 52;
+    right: 0;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20.5px;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  #StBackUp .body .titleBox .deleteIcon .deleteBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 51;
+    cursor: default;
+  }
+  #StBackUp .body .titleBox .deleteIcon img {
+    cursor: pointer;
+  }
+  #StBackUp .midBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin: 60px 0 60px 0;
+  }
+  #StBackUp .midBox .thirdLine {
+    grid-column: 1/3;
+  }
+  #StBackUp .midGrey {
+    color: #444444;
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  #StBackUp .middle {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: "Medium";
+    line-height: 27px;
+  }
+  #StBackUp .middle img {
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  #StBackUp .whiteBox {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    align-items: center;
+    padding: 16px 0px;
+    margin: 15px 0 60px;
+    width: 1228px;
+    /* height: 106px; */
+    padding: 28px 0;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  #StBackUp :nth-child(1) {
+    /* grid-column: 1 / span 2; */
+  }
+  #StBackUp .inBox {
+    display: grid;
+    flex-direction: column;
+    /* grid-column: 1 / 2; */
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+    align-items: center;
+    width: 306.62px;
+    /* height: 60px; */
+    font-size: 13px;
+  }
+  #StBackUp .font13 {
+    font-size: 13px;
+    font-family: "Medium";
+    line-height: 19px;
+  }
+  #StBackUp .font22 {
+    font-size: 22px;
+    font-family: "Medium";
+    line-height: 33px;
+    span {
+      font-size: 16px;
+    }
+  }
+  #StBackUp .line2 {
+    width: 0.5px;
+    height: 198px;
+    background: #bdbdbd;
+    margin: 0 43.75px;
+  }
+  #StBackUp .line {
+    width: 0.5px;
+    height: 59px;
+    background-color: #bdbdbd;
+  }
+  #StBackUp .white2 {
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    width: 1140px;
+    height: 198px;
+    padding: 44px;
+    margin-top: 15px;
+  }
+  #StBackUp .white2 svg {
+    height: 140px;
+  }
+  #StBackUp .white2 .left {
+    display: flex;
+    flex-direction: column;
+  }
+  #StBackUp .white2 .left .up {
+    display: flex;
+    justify-content: space-between;
+    width: 526px;
+    height: 33px;
+  }
+  #StBackUp .white2 .left .confirm {
+    height: 33px;
+    font-size: 22px;
+    font-family: "Medium";
+    
+  }
+  #StBackUp .white2 .left .confirm span {
+    color: #2276dc;
+  }
+  #StBackUp .white2 .left .dive {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 526px;
+    /* margin : px 0 0 0; */
+  }
+  #StBackUp .white2 .left .dive2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 526px;
+    margin: 0;
+  }
+  #StBackUp .white2 .left .pos {
+    position: absolute;
+    top: 60%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 144px;
+    height: 117px;
+  }
+  #StBackUp .white2 .num {
+    font-size: 52px;
+    font-family: "Medium";
+  }
+  #StBackUp .white2 .result {
+    font-family: "Medium";
+  }
+  #StBackUp .white2 .resultBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+  }
+  #StBackUp .white2 .chartBox {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    margin-top: 10px;
+  }
+  #StBackUp .white2 .checks {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    height: 24px;
+  }
+  #StBackUp .white2 .check {
+    /* margin-left : auto; */
+    color: #444444;
+  }
+  #StBackUp .white2 .check span {
+    color: #2276dc;
+  }
+  #StBackUp .white2 .checkk {
+    margin-left: auto;
+    color: #444444;
+  }
+  #StBackUp .white2 .square {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #c83b38;
+  }
+  #StBackUp .white2 .greenBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+  }
+  #StBackUp .white2 .checked {
+    display: flex;
+    width: 526px;
+    margin: 10px 0 0 0;
+  }
+  #StBackUp .white2 .blueBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #ffbc00;
+  }
+  #StBackUp .white2 .greyBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #bdbdbd;
+  }
+  #StBackUp .white2 .greenBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #3c9c9c;
+  }
+  #StBackUp .white2 .left .up .confirm {
+    line-height: 33px;
+  }
+  #StBackUp .white2 .left .just {
+    margin-top: 33px;
+    font-size: 18px;
+    font-family: "Medium";
+    line-height: 27px;
+  }
+  #StBackUp .white2 .left .dive {
+    margin-top: 39px;
+  }
+  #StBackUp .white2 .left .dive .resultBox {
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  #StBackUp .white2 .left .dive .resultBox .chartBox {
+    line-height: 24px;
+    margin: 0;
+  }
+  #StBackUp .white2 .left .dive2 .checking {
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 13px;
+  }
+  #StBackUp .white2 .left .dive2 .checking .checked {
+    margin: 0;
+  }
+  #StBackUp .white2 .left .dive2 .checking .checked .list {
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width : 1139px) {
+  #StBackUp {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 20px;
+    box-sizing: border-box;
+    background-color: #f0f1f2;
+  }
+  #StBackUp .noEvent {
+    color: #bdbdbd;
+  }
+  #StBackUp .rounding {
+    width: 3px;
+    height: 3px;
+    margin: auto 10px auto 0;
+    border-radius: 1.5px;
+    background-color: #55595f;
+  }
+  #StBackUp .nothing {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    color: #bdbdbd;
+    font-size: 14px;
+  }
+  #StBackUp .columning {
+    display: flex;
+  }
+  #StBackUp .list {
+    color: #55595f;
+    width: 69%;
+    /* text-indent: -20px; */
+    /* padding-left: 20px; */
+    font-size: 14px;
+    line-height: 21px;
+    font-family: "regular";
+  }
+  #StBackUp .flexing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  #StBackUp .line3 {
+    width: 0.5px;
+    height: 61px;
+    background-color: #bdbdbd;
+  }
+  #StBackUp .body {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+  #StBackUp .up {
+    width: 100%;
+  }
+  #StBackUp .down {
+    margin: 60px 0 15px 0;
+  }
+  #StBackUp .titleBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    line-height: 28px;
+    padding: 24px 0 16px;
+    font-family: "Bold";
+  }
+  #StBackUp .titleBox .title {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 12px;
+  }
+  #StBackUp .titleBox .title .imgPart {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    margin-bottom: auto;
+  }
+  #StBackUp .titleBox .title .imgPart .arrow {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  #StBackUp .titleBox .deleteIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 28px;
+    margin-bottom: auto;
+    margin-left: 10px;
+  }
+  #StBackUp .titleBox .deleteIcon .deleteButton {
+    display: flex;
+    align-items: center;
+    width: 168px;
+    height: 52px;
+    font-size: 16px;
+    font-family: "regular";
+    line-height: 24px;
+    position: absolute;
+    z-index: 52;
+    right: 0;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20.5px;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  #StBackUp .titleBox .deleteIcon .deleteBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 51;
+    cursor: default;
+  }
+  #StBackUp .titleBox .deleteIcon img {
+    cursor: pointer;
+  }
+  #StBackUp .gLine {
+    width: 100%;
+    height: 0.5px;
+    background: #d6d9dd;
+    margin: 24px auto;
+  }
+  #StBackUp .midBox {
+    padding: 14px 0 28px;
+  }
+  #StBackUp .midBox .midItem {
+      display: grid;
+      flex-direction: column;
+      padding: 14px 0;
+      box-sizing: border-box;
+      gap: 5px;
+  }
+  #StBackUp .midBox .midItem .midGrey {
+    line-height: 19px;
+    font-size: 16px;
+    font-family: "regular";
+    padding: 6px 0;
+  }
+  #StBackUp .middle {
+    display: flex;
+    font-size: 13px;
+    font-family: "regular";
+    line-height: 16px;
+    color: #55595f;
+  }
+  #StBackUp .middle img {
+    width: 16px;
+    margin-left: 6px;
+    cursor: pointer;
+  }
+  #StBackUp .whiteBox {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 12px;
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    margin: 10px auto 54px auto;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  #StBackUp .inBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
+  }
+  #StBackUp .font13 {
+    font-size: 12px;
+    font-family: "medium";
+    line-height: 18px;
+  }
+  #StBackUp .font22 {
+    font-size: 22px;
+    margin-top: 7px;
+    font-family: "medium";
+    line-height: 33px;
+    span {
+      font-size: 14px;
+    }
+  }
+  #StBackUp .line2 {
+    display: none;
+    width: 0.5px;
+    height: 198px;
+    background: #bdbdbd;
+    margin: 0 43.75px;
+  }
+  #StBackUp .line {
+    display: none;
+  }
+  #StBackUp .white2 {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  #StBackUp .white2 svg {
+    height: 140px;
+  }
+  #StBackUp .white2 .left {
+    display: flex;
+    flex-direction: column;
+  }
+  #StBackUp .white2 .up {
+    display: flex;
+    justify-content: space-between;
+    line-height: 27px;
+  }
+  #StBackUp .white2 .confirm {
+    height: 27px;
+    font-size: 18px;
+    font-family: "medium";
+    
+  }
+  #StBackUp .white2 .confirm span {
+    color: #2276dc;
+  }
+  #StBackUp .white2 .dive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 36px;
+  }
+  #StBackUp .white2 .dive2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  #StBackUp .white2 .pos {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 144px;
+    height: 117px;
+  }
+  #StBackUp .num {
+    font-size: 52px;
+    font-family: "Medium";
+  }
+  #StBackUp .result {
+    font-family: "Medium";
+  }
+  #StBackUp .resultBox {
+    display: grid;
+    flex-direction: column;
+    gap: 7.5px;
+    margin-top: 24px;
+    width: 210px;
+  }
+  #StBackUp .resultBox .chartBox {
+    display: flex;
+    align-items: center;
+  }
+  #StBackUp .resultBox .chartBox .square {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #c83b38;
+  }
+  #StBackUp .resultBox .chartBox .checks {
+    display: flex;
+    justify-content: space-between;
+    /* width: 163px; */
+    flex-grow: 1;
+  }
+  #StBackUp .resultBox .chartBox .checks .check {
+    color: #444444;
+    line-height: 21px;
+    
+  }
+  #StBackUp .resultBox .chartBox .checks .check span {
+    color: #2276dc;
+  }
+  #StBackUp .checkk {
+    margin-left: auto;
+    color: #444444;
+  }
+  #StBackUp .checking {
+    width: 100%;
+  }
+  #StBackUp .greenBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+  }
+  #StBackUp .just {
+    margin-top: 36px;
+    font-size: 15px;
+    font-family: "Medium";
+    line-height: 22px;
+  }
+  #StBackUp .checked {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+  #StBackUp .blueBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #ffbc00;
+  }
+  #StBackUp .greyBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #bdbdbd;
+  }
+  #StBackUp .greenBox {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    background-color: #3c9c9c;
+  }
+}
+
+/** 도넛그래프 */
+.StDonutGraph {
+  width: 143px;
+  height: 126px;
+  display: flex;
+}
+
+@media screen and (max-width : 1139px) {
+  .StDonutGraph {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width : 1140px) {
+  .StDonutGraph {
+    margin-left: 56.6px;
+  }
+}

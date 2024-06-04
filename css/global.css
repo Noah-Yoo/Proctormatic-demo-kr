@@ -1,0 +1,90 @@
+@import url("/Proctormatic-demo-kr/css/font.css");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root{
+  --MEDIUM: 'Medium';
+  --BOLD: 'Bold';
+  --REGULAR: 'Regular';
+  --DEMILIGHT: 'DemiLight';
+  /* --report-down-normal-color: #3C9C9C; */
+  /* --report-down-detectTwo-margin-left: 0px; */
+}
+html{
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+body{
+    font-family: 'Regular';
+    font-size: 16px;
+    -webkit-overflow-scrolling : touch !important;
+    
+}
+input{
+    -webkit-border-radius: 0;
+}
+
+@media screen and (min-width : 1140px) {
+  #StBody {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 1440px;
+      min-height: 100vh;
+      /* padding-right: ${(props) => (props.modalOn ? '10px' : '')}; */
+      box-sizing: border-box;
+      /* .block {
+      width: 100%;
+      height: 76px;
+      } */
+  }
+}
+
+@media screen and (max-width : 1139px) {
+  :root {
+    --vh: 100%;
+  }
+  body {
+    min-height: 675px;
+    height: 100vh;
+    height: var(--vh);
+  }
+  /* .block {
+    width: 100%;
+    height: 60px;
+  } */
+}
+
+@media (max-width: 1139px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c6c6c6;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+}

@@ -1,0 +1,10 @@
+testSummary = {
+  "isSuccess": true,
+  "getTestSummary": {
+      "hostPlan": "individualPlan",
+      "hostRegion": "KR",
+      "situation": "100%",
+      "success": 1,
+      "pending": 0
+  }
+}

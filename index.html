@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Proctormatic-demo-kr/css/global.css" />
+    <link rel="stylesheet" href="/Proctormatic-demo-kr/css/index.css" />
+    <link rel="icon" sizes="16x16" href="/Proctormatic-demo-kr/img/favicon_16.png" />
+    <link rel="icon" sizes="32x32" href="/Proctormatic-demo-kr/img/favicon_32.png" />
+    <link rel="icon" sizes="96x96" href="/Proctormatic-demo-kr/img/favicon_96.png" />
+    <link rel="manifest" href="/Proctormatic-demo-kr/manifest.json" />
+    <title>프록토매틱</title>
+    <script src="/Proctormatic-demo-kr/json/testSummary.json" type="text/javascript"></script>
+    <script src="/Proctormatic-demo-kr/json/finishExam.json" type="text/javascript"></script>
+    <script src="/Proctormatic-demo-kr/json/beforeUpload.json" type="text/javascript"></script>
+    <script src="/Proctormatic-demo-kr/json/waiting.json" type="text/javascript"></script>
+    <script src="/Proctormatic-demo-kr/js/function.js" type="text/javascript"></script>
+    <script>
+      var summary = JSON.parse(JSON.stringify(testSummary));
+      var data = summary?.getTestSummary;
+      var finish = JSON.parse(JSON.stringify(finishExam));
+      var fArr = finish?.getTestVerifiedList;
+      var fLen = fArr?.length;
+      var beforeUpload = JSON.parse(JSON.stringify(beforeUpload));
+      var bArr = beforeUpload?.getTestVerifiedList;
+      var bLen = bArr?.length;
+      var waiting = JSON.parse(JSON.stringify(waiting));
+      var wArr = waiting?.getTestPending;
+      var wLen = wArr?.length;
+    </script>
+</head>
+<body>
+    <div id="StBody">
+        <div id="bodyBlock">
+            <div id="StMyExam">
+                <!-- Up Start -->
+                <div id="StBodyUp">
+                    <div class="inBox">
+                        <div class="titleBox">
+                            내 시험 관리
+                        </div>
+                        <div class="st36">안녕하세요 :)</div>
+                        <div class="space">
+                          <div class="examInfo">
+                            <div class="line">
+                              <div class="infoLeft">주최자 정보 </div>
+                              <div class="infoBlack">
+                                EDINT_SOCIAL (social@edint.io)
+                              </div>
+                            </div>
+                            <div class="line">
+                              <div class="infoLeft">서비스 플랜</div>
+                              <div class="infoBlue">개인용</div>
+                            </div>
+                          </div>
+                          <div class="processBox">
+                            <div class="processIn">
+                              <div class="processUp">전체 검증 현황</div>
+                              <div class="processDown"><script>document.write(data?.situation)</script></div>
+                            </div>
+                            <div class="flexing">
+                              <div class="columnLine"></div>
+                              <div class="processIn">
+                                <div class="processUp">검증 완료</div>
+                                <div class="processDown"><script>document.write(data?.success)</script></div>
+                              </div>
+                              <div class="columnLine"></div>
+                            </div>
+                            <div class="processIn">
+                              <div class="processUp">진행 중</div>
+                              <div class="processDown"><script>document.write(data?.pending)</script></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!-- Up End -->
+                <!-- Down Start -->
+                <div id="StBodyDown">
+                  <div class="in">
+                    <div class="headBox">
+                      <div class="head">
+                        <div class="rotate">내 온라인 시험장</div>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div>
+                        <div class="titleBox">
+                            <div class="title">
+                              검증 완료 (<script>document.write(fLen)</script>)
+                            </div>
+                            <!-- <img
+                              class="toggle"
+                              alt=""
+                              src="./img/toggleAfter.svg"
+                            /> -->
+                        </div>
+                        <script>
+                          if(fArr?.length !== 0) {
+                            document.write("<div class='boxs'>");
+                              for(var i = 0; i < Number(fLen); i++) {
+                                if(fArr[i].clickable === true) {
+                                  document.write("<div class='StBox' onclick=location.href='report.html?"+fArr[i].index+"'>");
+                                }else {
+                                  document.write("<div class='StBox'>");
+                                }
+                                document.write("<div class='test'>"+fArr[i].testName+"</div>");
+                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='grey'>");
+                                document.write(writeTimeFormat(fArr[i].testStartTime, fArr[i].testEndTime));
+                                document.write("</div>");
+                                document.write("<div class='write'>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='blue'>"+fArr[i].testUploaded+"</div>")
+                                document.write("</div>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Status</div>");
+                                document.write("<div class='progress'>"+setStep(fArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Completed</div>");
+
+                                if(fArr[i].testFinishTime === "-") {
+                                  document.write("<div class='blue'>-</div>");
+                                } else {
+                                  document.write("<div class='blue'>");
+                                  document.write(writeTimeFormat(fArr[i].testFinishTime));
+                                  document.write("</div>");
+                                }
+                                document.write("</div>");
+
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='blue'>"+setReport(fArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                              }
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='nothing'>완료된 시험이 없음</div>");
+                          }
+                        </script>
+                      </div>
+                      <div>
+                        <div class="titleBox2">
+                          <div class="title">
+                            검증 / 업로드 진행 중 (<script>
+                              if(bLen !== undefined) {
+                                document.write(bLen);
+                              } else {
+                                document.write("0");
+                              }
+                            </script>)
+                          </div>
+                          <!-- <img
+                            class="toggle"
+                            alt=""
+                            src="./img/toggle.svg"
+                          /> -->
+                        </div>
+                        <script>
+                          if(bArr?.length !== 0) {
+                            document.write("<div class='boxs'>");
+                              for(var i = 0; i < Number(wLen); i++) {
+                                if(bArr[i].clickable === true) {
+                                  document.write("<div class='StBox before' onclick=location.href='report.html?"+bArr[i].index+"'>");
+                                }else {
+                                  document.write("<div class='StBox before'>");
+                                }
+                                document.write("<div class='test'>"+bArr[i].testName+"</div>");
+                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='grey'>");
+                                document.write(writeTimeFormat(bArr[i].testStartTime, bArr[i].testEndTime));
+                                document.write("</div>");
+                                document.write("<div class='write'>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='blue'>"+bArr[i].testUploaded+"</div>")
+                                document.write("</div>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Status</div>");
+                                document.write("<div class='progress'>"+setStep(bArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Completed</div>");
+
+                                if(bArr[i].testFinishTime === "-") {
+                                  document.write("<div class='blue'>-</div>");
+                                } else {
+                                  document.write("<div class='blue'>");
+                                  document.write(writeTimeFormat(bArr[i].testFinishTime));
+                                  document.write("</div>");
+                                }
+                                document.write("</div>");
+
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='blue'>"+setReport(bArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                              }
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='nothing'>진행 중인 시험이 없음</div>");
+                          }
+                        </script>
+                      </div>
+                      <div>
+                        <div class="titleBox3">
+                          <div class="title">
+                            진행 예정 (<script>
+                              if(wLen !== undefined) {
+                                document.write(wLen);
+                              } else {
+                                document.write("0");
+                              }
+                            </script>)
+                          </div>
+                          <!-- <img
+                            class="toggle"
+                            alt=""
+                            src="./img/toggle.svg"
+                          /> -->
+                        </div>
+                        <script>
+                          if(wArr?.length !== 0) {
+                            document.write("<div class='boxs'>");
+                              for(var i = 0; i < Number(wLen); i++) {
+                                if(wArr[i].clickable === true) {
+                                  document.write("<div class='StBox' onclick=location.href='report.html?"+wArr[i].index+"'>");
+                                }else {
+                                  document.write("<div class='StBox'>");
+                                }
+                                document.write("<div class='test'>"+wArr[i].testName+"</div>");
+                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='grey'>");
+                                document.write(writeTimeFormat(wArr[i].testStartTime, wArr[i].testEndTime));
+                                document.write("</div>");
+                                document.write("<div class='write'>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='blue'>"+wArr[i].testUploaded+"</div>")
+                                document.write("</div>");
+                                document.write("<div class='writeLine'>");
+                                document.write("<div class='simple12'>Status</div>");
+                                document.write("<div class='progress'>"+setStep(wArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Completed</div>");
+
+                                if(wArr[i].testFinishTime === "-") {
+                                  document.write("<div class='blue'>-</div>");
+                                } else {
+                                  document.write("<div class='blue'>");
+                                  document.write(writeTimeFormat(wArr[i].testFinishTime));
+                                  document.write("</div>");
+                                }
+                                document.write("</div>");
+
+                                document.write("<div class='StLine mobile writeLine'>");
+                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='blue'>"+setReport(wArr[i].testStep)+"</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                                document.write("</div>");
+                              }
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='nothing'>예정된 시험이 없음</div>");
+                          }
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Down End -->
+            </div>
+        </div>
+    </div>
+    <script src="/Proctormatic-demo-kr/script.js"></script>
+</body>
+</html>

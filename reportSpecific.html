@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Proctormatic-demo-kr/css/global.css" />
+  <link rel="stylesheet" href="/Proctormatic-demo-kr/css/reportSpecificUp.css" />
+  <link rel="stylesheet" href="/Proctormatic-demo-kr/css/modal.css" />
+  <link rel="icon" sizes="16x16" href="/Proctormatic-demo-kr/img/favicon_16.png" />
+  <link rel="icon" sizes="32x32" href="/Proctormatic-demo-kr/img/favicon_32.png" />
+  <link rel="icon" sizes="96x96" href="/Proctormatic-demo-kr/img/favicon_96.png" />
+  <script src="/Proctormatic-demo-kr/json/reportSpecific/userData.json" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/json/reportSpecific/rawUserData.json" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/json/reportSpecific/uploaderList.json" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/json/reportSpecific/videoURL.json" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/json/reportSpecific/settingURL.json" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/js/function.js" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/js/physical.js" type="text/javascript"></script>
+  <script src="/Proctormatic-demo-kr/js/graph.js" type="text/javascript"></script>
+  <title>프록토매틱</title>
+  <script>
+    const reportNumber = location.href.split('?')[1].split("&")[0];
+    const targetNumber = location.href.split('?')[1].split("&")[1];
+    const isRaw = location.href.split('?')[1].split("&")[2];
+    var user
+    if(isRaw === 'true') {
+      user = JSON.parse(JSON.stringify(rawUserData))[reportNumber].report[targetNumber];
+    } else {
+      user = JSON.parse(JSON.stringify(userData))[reportNumber].report[targetNumber];
+    }
+    // var units = JSON.parse(JSON.stringify(uploaderList))[reportNumber].report[targetNumber];
+    var testVideo = JSON.parse(JSON.stringify(videoURL))[reportNumber].report[targetNumber];
+    var settingPhoto = JSON.parse(JSON.stringify(settingURL))[reportNumber].report[targetNumber];
+    // var rawDataState = false; // rawData 보기 버튼
+    var eventListButton = false; // 이벤트 더 보기 버튼
+    var tableFillCount = setTableFillCount(user?.testReport?.history?.table?.length);
+    var graphUnit = setGraphUnit(user?.testReport?.timeline?.testVideoLength);
+    var columnCount = setColumnCount(user?.testReport?.timeline?.testVideoLength, graphUnit);
+    var auto = false;
+    const cheating = user?.testReport?.timetable?.filter(
+      (user) => user?.level === "cheat"
+    );
+    const abnormal = user?.testReport?.timetable?.filter(
+      (user) => user?.level === "abnormal"
+    );
+    var nowPhotoNumber = 1;
+  </script>
+</head>
+<body>
+  <div id="StBody">
+    <div id="bodyBlock">
+      <!-- rawDataModal Start -->
+      <div id='rawDataModal' style='display:none;'>
+        <div class='StModalBackD'></div>
+        <div class='StRawData'>
+          <div class='StModalHeaderD'>원본 내역 포함해서 보기</div>
+          <div class='bodyBox'>
+            프록토매틱에서 감지한 모든 이벤트의 원본 내역을 포함하여 확인할 수
+            있어요. 다만, 가공 처리가 이루어지지 않은 원본 데이터 특성 상 중복
+            감지, 오감지 등 다수의 불필요한 이벤트들이 함께 보여질 수 있으므로
+            해당 보기를 선택할 때 주의가 필요해요.
+          </div>
+          <div class='listBox'>
+            <div>※ &nbsp;변경되는 보기 항목</div>
+            <li>
+              <span>감지된 이벤트 내역</span>
+            </li>
+            <li>
+              <span>감지된 이벤트 영상</span>
+            </li>
+            <li>
+              <span>신체/환경 요소 별 감지 데이터</span>
+            </li>
+          </div>
+          <div class='buttonBoxs'>
+            <div
+              class="buttonBox"
+              onclick="rawDataModalButton('CANCEL');"
+            >
+              취소
+            </div>
+            <div
+              class="buttonBox confirmBox"
+              onclick="rawDataModalButton('OK');"
+            >
+              확인
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- rawDataModal End -->
+      <div id="ReSpUp">
+        <!-- PhotoModal Start -->
+        <div id='envirPhotoModal1' style='display:none;'>
+          <div class='StModalBack'></div>
+          <div class='StPhoto'>
+            <div class='mainTitle'>
+              주변환경 스캔 내역
+              <img
+                src="./img/reportSpecific/greyX.svg"
+                style="cursor: pointer;"
+                alt=""
+                onclick="photoModalCancel('Modal1');"
+              />
+            </div>
+            <div class="bodyPart">
+              <div class="titleBox">
+                <script>
+                  var photoModalList = [settingPhoto?.aroundSetting?.preTestPhoto];
+                  if(photoModalList.length > 1) {
+                    document.write("<div id='titleText'>");
+                      document.write(photoModalList.length);
+                      document.write(". 응시 중 재점검");
+                    document.write("</div>")
+                  }
+                </script>
+              </div>
+              <div class="imgBox">
+                <script>
+                  document.write("<img\
+                    src='"+settingPhoto?.aroundSetting?.preTestPhoto+"'\
+                    alt=''\
+                  />");
+                </script>
+              </div>
+              <script>
+                if(photoModalList.length > 1) {
+                  document.write("<div class='pageNationBox'>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;display:none;'\
+                        src='./img/reportSpecific/arrowLeftWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(1, this, \""+settingPhoto.aroundSetting.preTestPhoto+"\");';\
+                      />");
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write(nowPhotoNumber + "/" + photoModalList.length);
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;'\
+                        src='./img/reportSpecific/arrowRightWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(2, this, \""+settingPhoto.aroundSetting.preTestPhoto+"\");';\
+                      />");
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id='envirPhotoModal2' style='display:none;'>
+          <div class='StModalBack'></div>
+          <div class='StPhoto'>
+            <div class='mainTitle'>
+              주변환경 스캔 내역
+              <img
+                src="./img/reportSpecific/greyX.svg"
+                style="cursor: pointer;"
+                alt=""
+                onclick="photoModalCancel('Modal2');"
+              />
+            </div>
+            <div class="bodyPart">
+              <div class="titleBox">
+                <script>
+                  photoModalList = settingPhoto?.aroundSetting?.reactivateTestPhotos;
+                  if(photoModalList.length > 1) {
+                    document.write("<div id='titleText'>");
+                      document.write(photoModalList.length);
+                      document.write(". 응시 중 재점검");
+                    document.write("</div>")
+                  }
+                </script>
+              </div>
+              <div class="imgBox">
+                <script>
+                  document.write("<img\
+                    src='"+settingPhoto?.aroundSetting?.reactivateTestPhotos[0]+"'\
+                    alt=''\
+                  />");
+                </script>
+              </div>
+              <script>
+                if(photoModalList.length > 1) {
+                  document.write("<div class='pageNationBox'>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;display:none;'\
+                        src='./img/reportSpecific/arrowLeftWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(1, this, \""+settingPhoto.aroundSetting.reactivateTestPhotos+"\");';\
+                      />");
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write(nowPhotoNumber + "/" + photoModalList.length);
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;'\
+                        src='./img/reportSpecific/arrowRightWhite.svg'\
+                        onclick='photoModalPageNation(2, this, \""+settingPhoto.aroundSetting.reactivateTestPhotos+"\");'\
+                        alt=''\
+                      />");
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id='cameraPhotoModal1' style='display:none;'>
+          <div class='StModalBack'></div>
+          <div class='StPhoto'>
+            <div class='mainTitle'>
+              주변환경 스캔 내역
+              <img
+                src="./img/reportSpecific/greyX.svg"
+                style="cursor: pointer;"
+                alt=""
+                onclick="photoModalCancel('Modal3');"
+              />
+            </div>
+            <div class="bodyPart">
+              <div class="titleBox">
+                <script>
+                  photoModalList = [settingPhoto?.cameraSetting?.preTestPhoto];
+                  if(photoModalList.length > 1) {
+                    document.write("<div id='titleText'>");
+                      document.write(photoModalList.length);
+                      document.write(". 응시 중 재점검");
+                    document.write("</div>")
+                  }
+                </script>
+              </div>
+              <div class="imgBox">
+                <script>
+                  document.write("<img\
+                    src='"+settingPhoto?.cameraSetting?.preTestPhoto+"'\
+                    alt=''\
+                  />");
+                </script>
+              </div>
+              <script>
+                if(photoModalList.length > 1) {
+                  document.write("<div class='pageNationBox'>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;display:none;'\
+                        src='./img/reportSpecific/arrowLeftWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(1, this, \""+settingPhoto.cameraSetting.preTestPhoto+"\");';\
+                      />");
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write(nowPhotoNumber + "/" + photoModalList.length);
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;'\
+                        src='./img/reportSpecific/arrowRightWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(2, this, \""+settingPhoto.cameraSetting.preTestPhoto+"\");';\
+                      />");
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id='cameraPhotoModal2' style='display:none;'>
+          <div class='StModalBack'></div>
+          <div class='StPhoto'>
+            <div class='mainTitle'>
+              주변환경 스캔 내역
+              <img
+                src="./img/reportSpecific/greyX.svg"
+                style="cursor: pointer;"
+                alt=""
+                onclick="photoModalCancel('Modal4');"
+              />
+            </div>
+            <div class="bodyPart">
+              <div class="titleBox">
+                <script>
+                  photoModalList = settingPhoto?.cameraSetting?.reactivateTestPhotos;
+                  if(photoModalList.length > 1) {
+                    document.write("<div id='titleText'>");
+                      document.write(photoModalList.length);
+                      document.write(". 응시 중 재점검");
+                    document.write("</div>")
+                  }
+                </script>
+              </div>
+              <div class="imgBox">
+                <script>
+                  document.write("<img\
+                    src='"+settingPhoto?.cameraSetting?.reactivateTestPhotos[0]+"'\
+                    alt=''\
+                  />");
+                </script>
+              </div>
+              <script>
+                if(photoModalList.length > 1) {
+                  document.write("<div class='pageNationBox'>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;display:none;'\
+                        src='./img/reportSpecific/arrowLeftWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(1, this, \""+settingPhoto.cameraSetting.reactivateTestPhotos+"\");'\
+                      />");
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write(nowPhotoNumber + "/" + photoModalList.length);
+                    document.write("</div>");
+                    document.write("<div>");
+                      document.write("<img\
+                        style='cursor:pointer;'\
+                        src='./img/reportSpecific/arrowRightWhite.svg'\
+                        alt=''\
+                        onclick='photoModalPageNation(2, this, \""+settingPhoto.cameraSetting.reactivateTestPhotos+"\");'\
+                      />");
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- PhotoModal End -->
+        <!-- share sendingConfirmModal Start -->
+        <div id='sendingConfirmModal' style='display:none;'>
+          <div class='StModalBackD'></div>
+          <div class='StSendingConfirm'>
+            <div class='StModalHeaderD'>이벤트 영상 URL 생성</div>
+            <div class='wrapper'>
+              <div class='textBox'>
+                선택한 영상의 길이에 따라 전용 영상 URL 생성 시간이 달라질 수
+                있으며, 10분 길이를 기준으로 1분 이상 소요될 수 있어요.
+              </div>
+              <div class='warningBox'>
+                <div class='warningHeader'>
+                  ※ &nbsp;&nbsp;<span>주의 사항</span>
+                </div>
+                <div class='warningList'>
+                  <li>URL 내 영상은 최대 10분까지만 재생돼요.</li>
+                  <li>생성된 영상 URL은 7일까지만 유효해요.</li>
+                </div>
+              </div>
+              <div class='buttonBox'>
+                <div 
+                  class="cancelButton"
+                  onclick="confirmButton('CANCEL')"
+                >
+                  취소
+                </div>
+                <div class="greyBar"></div>
+                <div 
+                  class="confirmButton"
+                  onclick="confirmButton('CONFIRM')"
+                >
+                  계속하기
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- share sendingConfirmModal End -->
+        <!-- share SendingModal Start -->
+        <div id='sendingModal' style='display:none;'>
+          <div class='StModalBackD'></div>
+          <div class='StSendingVideo'>
+            <div class='StModalHeaderD'>영상 전달하기</div>
+            <div class='buttonBox'>
+              <div
+                id="text"
+                onclick="sendingCancelButton();"
+              >
+                링크 복사
+              </div>
+              <div onclick='sendingCancelButton();'>응시자에게 이메일 작성</div>
+            </div>
+            <div 
+              class='cancelButton'
+              onclick='sendingCancelButton();'
+            >
+              취소
+            </div>
+          </div>
+        </div>
+        <!-- share SendingModal End -->
+        <div class="body">
+          <div class="upTitle">
+            <div class="flexing">
+              <!-- <img
+                class="arrow"
+                alt=""
+                onclick="javascript:history.back();"
+                src="./img/arrow.svg"
+              /> -->
+              <img
+                id="arrow"
+                class="arrow"
+                alt=""
+                src="./img/arrow.svg"
+              />
+              <span>검증 결과보고서</span>
+            </div>
+            <!-- 시험 유저 변경 인터렉션 삭제 -->
+            <!-- <div class="users">
+            </div> -->
+          </div>
+          <div class="reportContent">
+            <img
+              id="userPhoto"
+              class="userPhoto"
+              alt=""
+            />
+            <div class="testerInformationBox">
+              <div class="eachItemBox">
+                <div class="titlePart">응시자 이름</div>
+                <div class="namePart">
+                  <script>document.write(user?.testReport?.uploader?.uploaderName);</script>
+                </div>
+              </div>
+              <div class="eachItemBox">
+                <div class="titlePart">응시자 이메일</div>
+                <!-- <a class="emailPart" href={userMail}> -->
+                <a id="emailPart" class="emailPart">
+                  <script>document.write(user?.testReport?.uploader?.uploaderEmail);</script>
+                </a>
+              </div>
+              <div class="eachItemBox">
+                <div class="titlePart">응시자 접속 지역</div>
+                <div class="bodyPart">
+                  <script>document.write(user?.testReport?.uploader?.uploaderLocation);</script>
+                </div>
+              </div>
+              <script>
+                if(user?.testReport?.isTesterSelfExit) {
+                  document.write("<div class='eachItemBox'>");
+                    document.write("<div class='titlePart'>");
+                      document.write("실제 응시 종료 시간");
+                    document.write("</div>");
+                    document.write("<div class='bodyPart'>");
+                      if(user?.testReport?.uploader?.finishTestTime !== "-") {
+                        document.write(writeTimeFormat(user.testReport.uploader.finishTestTime));
+                        document.write(" (UTC+");
+                        document.write(-(new Date().getTimezoneOffset()) / 60);
+                        document.write(")");
+                      } else {
+                        document.write("- ");
+                      }
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+              </script>
+              <div class="eachItemBox">
+                <div class="titlePart">영상 업로드 시간</div>
+                <div class="bodyPart">
+                  <script>
+                    if(user?.testReport?.uploader?.uploadVideoTime !== "-") {
+                      document.write(writeTimeFormat(user.testReport.uploader.uploadVideoTime));
+                      document.write(" (UTC+");
+                      document.write(-(new Date().getTimezoneOffset()) / 60);
+                      document.write(")");
+                    } else {
+                      document.write("- ");
+                    }
+                  </script>
+                </div>
+              </div>
+              <div class="eachItemBox">
+                <div class="titlePart">
+                  영상 변조 여부
+                </div>
+                <script>
+                  if(user?.testReport?.uploader?.isTamperedVideo === "-") {
+                    document.write("<div class='bodyPart'>");
+                      document.write("-");
+                    document.write("</div>");
+                  } else {
+                    if(user?.testReport?.uploader?.isTamperedVideo === true) {
+                      document.write("<div class='bodyPart' style='color:#C83B38'>");
+                        document.write("원본이 아니거나 편집 영상으로 의심됨");
+                      document.write("</div>");
+                    } else {
+                      document.write("<div class='bodyPart'>");
+                        document.write("정상");
+                      document.write("</div>");
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="synthesizeOpinionBox">
+              <div class="title">프록토매틱 종합 소견</div>
+              <div class="bodyPart">
+                <script>
+                  if(user?.testReport?.conclusion?.check === "cheat") {
+                    document.write("<img class='image' alt='bad' src='./img/reportSpecific/Bad.svg' />");
+                  } else if(user?.testReport?.conclusion?.check === "abnormal") {
+                    document.write("<img class='image' alt='middle' src='./img/reportSpecific/suspicious.svg' />");
+                  } else if(user?.testReport?.conclusion?.check === "normal") {
+                    document.write("<img class='image' alt='good' src='./img/reportSpecific/normal.svg' />");
+                  } else if(user?.testReport?.conclusion?.check === "incompleteTest") {
+                    document.write("<img class='image' alt='good' src='./img/reportSpecific/incompleteTest.svg' />");
+                  } else if(user?.testReport?.conclusion?.check === "uploadNotCompleted") {
+                    document.write("<img class='image' alt='good' src='./img/reportSpecific/uploadNotCompleted.svg' />");
+                  } else if(user?.testReport?.conclusion?.check === "errorCase") {
+                    document.write("<img class='image' alt='error' src='./img/reportSpecific/errorCase.svg' />");
+                  }
+                </script>
+                <div class="talk">
+                  <div class="triangle"></div>
+                  <div class="messageBalloon">
+                    <script>
+                      if(user?.testReport?.status === "tamperedVideo") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("응시자가 업로드한 영상의 변조가 확인되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("실제 촬영 및 녹화된 원본이 아니거나 편집된\
+                              영상으로 확인됨. 응시자에게 직접 연락하여 확인을\
+                              요망함.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cheatCameraOffUnverifiedEnv") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("부정행위로 의심되는 이벤트(");
+                          document.write(user?.testReport?.conclusion?.cheatCount);
+                          document.write("건), ");
+                          document.write("응시 중 카메라 꺼짐 (");
+                          document.write(user?.testReport?.conclusion?.cameraOffCount);
+                          document.write("건)과");
+                          document.write(" 주변환경 스캔 내역 중 위반행위가 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cheatUnverifiedEnv") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("부정행위로 의심되는 이벤트(");
+                          document.write(user?.testReport?.conclusion?.cheatCount);
+                          document.write("건)과 ");
+                          document.write("주변환경 스캔 내역 중 위반행위가 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cheatCameraOff") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("부정행위로 의심되는 이벤트(");
+                          document.write(user?.testReport?.conclusion?.cheatCount);
+                          document.write("건)과 ");
+                          document.write("응시 중 카메라 꺼짐 (");
+                          document.write(user?.testReport?.conclusion?.cameraOffCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "unverifiedEnvCameraOff") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("주변환경 스캔 내역 중 위반행위와 응시 중 카메라꺼짐 (");
+                          document.write(user?.testReport?.conclusion?.cameraOffCount);
+                          document.write("건)이 감지되었어요! ");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "unverifiedEnvAbnormal") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("주변환경 스캔 내역 중 위반행위와 이상행동으로 감지된 이벤트(");
+                          document.write(user?.testReport?.conclusion?.abnormalCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "unverifiedEnv") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("주변환경 스캔 내역 중 금지물건이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 내역에 대한 확인 및 검토가 반드시 필요하며,\
+                              그 외 감지 항목들에 대해서도 재검토 요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cameraOffAbnormal") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("응시 중 카메라 꺼짐 (");
+                          document.write(user?.testReport?.conclusion?.cameraOffCount);
+                          document.write("건)과 ");
+                          document.write("이상행동으로 감지된 이벤트(");
+                          document.write(user?.testReport?.conclusion?.abnormalCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("소수의 이상행동만 감지됨에 따라 정상 응시로\
+                              판단되나, 카메라 꺼짐에 대한 확인 및 검토는\
+                              필요함.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cameraOff") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("응시 중 카메라 꺼짐 (");
+                          document.write(user?.testReport?.conclusion?.cameraOffCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("별도의 이벤트는 감지되지 않았으나, 카메라 꺼짐에\
+                              대한 확인 및 검토는 필요함.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "cheatUpload") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("부정행위로 의심되는 이벤트(");
+                          document.write(user?.testReport?.conclusion?.cheatCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("해당 이벤트 영상에 대한 확인 및 검토가 반드시\
+                              필요하며, 그 외 감지 항목들에 대해서도 재검토\
+                              요망.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "abnormalUpload") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("이상행동으로 감지된 이벤트(");
+                          document.write(user?.testReport?.conclusion?.abnormalCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("다수의 이상행동들이 감지됨에 따라 해당 이벤트\
+                              영상에 대한 확인 및 검토를 권장함.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "normalUpload") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("부정행위 또는 이상행동으로 감지된 이벤트가 없어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("별도의 확인 및 검토가 필요없음.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "normalUploadIncludesAbnormal") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("이상행동으로 감지된 이벤트(");
+                          document.write(user?.testReport?.conclusion?.abnormalCount);
+                          document.write("건)이 감지되었어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("소수의 이상행동만 감지됨에 따라 정상 응시로\
+                              판단됨. 필요 시 해당 이벤트 영상에 대한 확인 및\
+                              검토를 권장함.");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "incompleteTest") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("응시를 정상적으로 끝마치지 못했어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("응시는 시작했으나, 끝까지 완료하지 못한 것으로\
+                              확인됨.");
+                        document.write("</div>");
+                        document.write("<div class='timeMessage'>");
+                          document.write("<div>응시 시작</div>");
+                          document.write("<span>");
+                            document.write(writeTimeFormat(user?.testReport?.conclusion?.startTestTime, "", "", "hh:mm:ss A"));
+                            document.write(" (UTC+");
+                            document.write(-(new Date().getTimezoneOffset()) / 60);
+                            document.write(")");
+                          document.write("</span>");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      } else if(user?.testReport?.status === "errorCase") {
+                        document.write("<div class='mainMessage'>");
+                          document.write("응시 영상을 분석 중에 알 수 없는 오류가\
+                              발생하였어요!");
+                        document.write("</div>");
+                        document.write("<div class='subMessage'>");
+                          document.write("응시와 녹화, 영상 업로드는 정상적으로 완료된\
+                              것으로 확인되나, 알 수 없는 오류가 발생하여 영상\
+                              분석 진행이 정상적으로 처리되지 않았어요.\
+                              고객센터를 통해 연락주시면 신속하게 도와드릴게요.");
+                        document.write("</div>");
+                        document.write("<div class='timeMessage'>");
+                          document.write("<div>응시 시작</div>");
+                          document.write("<span>");
+                            document.write(writeTimeFormat(user?.testReport?.conclusion?.startTestTime, "", "", "hh:mm:ss A"));
+                            document.write(" (UTC+");
+                            document.write(-(new Date().getTimezoneOffset()) / 60);
+                            document.write(")");
+                          document.write("</span>");
+                        document.write("</div>");
+                        document.write("<div class='timeMessage'>");
+                          document.write("<div>응시 종료</div>");
+                          document.write("<span>");
+                            document.write(writeTimeFormat(user?.testReport?.conclusion?.finishTestTime, "", "", "hh:mm:ss A"));
+                            document.write(" (UTC+");
+                            document.write(-(new Date().getTimezoneOffset()) / 60);
+                            document.write(")");
+                          document.write("</span>");
+                        document.write("</div>");
+                        document.write("<div class='notificationMessage'>");
+                          document.write("*아래 규칙 위반 내역 및 감지된 영상 참조");
+                        document.write("</div>");
+                      }
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Detail Report Start -->
+            <script>
+              if(user?.testReport?.status !== "incompleteTest" &
+                user?.testReport?.status !== "uploadNotCompleted" &
+                user?.testReport?.status !== "errorCase") {
+                  document.write("<div class='detectedEventBox'>");
+                    document.write("<div class='title'>");
+                      document.write("감지된 이벤트 내역");
+                    document.write("</div>");
+                    document.write("<div class='bodyPart'>");
+                      document.write("<div class='total'>");
+                        document.write("<div class='inside'>");
+                          document.write("<div class='what'>");
+                            document.write("<div>");
+                              document.write(" 총 이벤트 ");
+                            document.write("</div>");
+                          document.write("</div>");
+                          document.write("<div class='down'>");
+                            document.write(" ");
+                            document.write("<span class='num'>");
+                              document.write(user?.testReport?.history?.summary?.totalEventCount);
+                            document.write("</span> ");
+                            document.write("건 ");
+                          document.write("</div>");
+                        document.write("</div>");
+                        document.write("<div class='inside'>");
+                          document.write("<div class='what'>");
+                            document.write("<div class='circleRed'></div>");
+                            document.write("<div>");
+                              document.write(" 부정행위 ");
+                            document.write("</div>");
+                          document.write("</div>");
+                          document.write("<div class='down'>");
+                            document.write(" ");
+                            document.write("<span class='num'>");
+                              document.write(user?.testReport?.history?.summary?.cheatEventCount);
+                            document.write("</span> ");
+                            document.write("건 ")
+                          document.write("</div>");
+                        document.write("</div>");
+                        document.write("<div class='inside'>");
+                          document.write("<div class='what'>");
+                            document.write("<div class='circleYellow'></div>");
+                            document.write("<div>");
+                              document.write(" 이상행동 ");
+                            document.write("</div>");
+                          document.write("</div>");
+                          document.write("<div class='down'>");
+                            document.write(" ");
+                            document.write("<span class='num'>");
+                              document.write(user?.testReport?.history?.summary?.abnormalEventCount);
+                            document.write("</span> ");
+                            document.write("건 ")
+                          document.write("</div>");
+                        document.write("</div>");
+                      document.write("</div>");
+                      document.write("<div class='bodyRight'>");
+                        // rawData 보기 onclick 만들어야함
+                        document.write("<div class='rawDataLine'>");
+                          if(isRaw === 'true') {
+                            document.write("<div class='rawDataCheckBox rawCheck' onclick=rawDataCheck('checked');>");
+                              document.write("<img src='./img/reportSpecific/white_ch.svg' alt='' />");
+                          } else {
+                            document.write("<div class='rawDataCheckBox' onclick=rawDataCheck('unchecked');>");
+                          }
+                          document.write("</div>");
+                          document.write("원본 내역 포함");
+                        document.write("</div>");
+                        document.write("<div class='eventTable'>");
+                          document.write("<div class='tableHeader'>");
+                            document.write("<div>");
+                              document.write("부정행위 / 이상행동 이벤트");
+                            document.write("</div>");
+                            document.write("<div class='accCount'>");
+                              document.write("건수");
+                            document.write("</div>");
+                            document.write("<div style='text-align: center;'>");
+                              document.write("시간");
+                            document.write("</div>");
+                          document.write("</div>");
+                          document.write("<div class='tableMargin'>");
+                            document.write("<div> </div>");
+                            document.write("<div class='accCount'> </div>");
+                            document.write("<div> </div>");
+                          document.write("</div>");
+                          if(user?.testReport?.history?.table?.length > 0) {
+                            user?.testReport?.history?.table?.map((value, index) => {
+                              if(index > 2 & !eventListButton) {
+                                document.write("<div class='StEventTable' style='display:none;'>");
+                              } else {
+                                document.write("<div class='StEventTable'>");
+                              }
+                                document.write("<div class='tableSort'>");
+                                  if(value?.level === "cheat") {
+                                    document.write("<div class='tableLevel cheat'></div>");
+                                  } else if(value?.level === "abnormal") {
+                                    document.write("<div class='tableLevel abnormal'></div>");
+                                  }
+                                  document.write("<div class='tableText'>");
+                                    document.write(value?.sort);
+                                  document.write("</div>");
+                                document.write("</div>");
+                                document.write("<div class='tableAccCount'>");
+                                  document.write(value?.accCount);
+                                document.write("</div>");
+                                document.write("<div class='tableAccDuration'>");
+                                  document.write(Math.floor(value?.accDuration));
+                                document.write("</div>");
+                              document.write("</div>");
+                            });
+                          } else {
+                            document.write("<div class='noEvent'>");
+                              document.write("<div style='font-size: 13px; color: #BDBDBD;'>");
+                                document.write("이벤트 없음");
+                              document.write("</div>");
+                              document.write("<div class='middleCount'>-</div>");
+                              document.write("<div>-</div>");
+                            document.write("</div>");
+                          }
+                          document.write("<div class='tableMargin'>");
+                            document.write("<div> </div>");
+                            document.write("<div class='accCount'> </div>");
+                            document.write("<div> </div>");
+                          document.write("</div>");
+                          if(user?.testReport?.history?.table?.length < 4 &
+                          user?.testReport?.history?.table?.length > 0) {
+                            document.write("<div>");
+                              tableFillCount?.map((value, index) => {
+                                document.write("<div class='fillEvent' key="+index+">");
+                                  document.write("<div></div>");
+                                  document.write("<div class='middleCount'></div>");
+                                  document.write("<div></div>");
+                                document.write("</div>");
+                              });
+                            document.write("</div>");
+                          }
+                          if(!eventListButton & user?.testReport?.history?.table?.length > 3) {
+                            document.write("<div\
+                            id='tableshowMore'\
+                            class='tableShowMore'\
+                            onclick='showMore(this)'\
+                            >");
+                              document.write("<div class='eventMore'>");
+                                document.write("이벤트 더보기");
+                              document.write("</div>");
+                              document.write("<div class='accCount'></div>");
+                              document.write("<div></div>");
+                            document.write("</div>");
+                          }
+                        document.write("</div>");
+                      document.write("</div>");
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+            </script>
+            <!-- Detail Report End -->
+            <!-- Detected Issues Start -->
+            <script>
+              if(user?.testReport?.status !== "incompleteTest" &
+                user?.testReport?.status !== "uploadNotCompleted" &
+                user?.testReport?.status !== "errorCase") {
+                  document.write("<div class='detectedVideoBox'>");
+                    document.write("<div class='title'>");
+                      document.write("<div>");
+                        document.write("감지된 이벤트 영상");
+                      document.write("</div>");
+                    document.write("</div>");
+                    document.write("<div class='timeLinePart'>");
+                      document.write("<div class='timeLineInfo'>");
+                        document.write("<div>");
+                          document.write("타임라인");
+                        document.write("</div>");
+                        document.write("<div class='rightInfo'>");
+                          document.write("<div class='infoItemForm'>");
+                            document.write("<div class='circle' style='background: #C83B38;'></div>");
+                            document.write("<div>");
+                              document.write("부정행위");
+                            document.write("</div>");
+                          document.write("</div>");
+                          document.write("<div class='infoItemForm'>");
+                            document.write("<div class='circle' style='background: #FFBC00;'></div>");
+                            document.write("<div>");
+                              document.write("이상행동");
+                            document.write("</div>");
+                          document.write("</div>");
+                        document.write("</div>");
+                      document.write("</div>");
+                      document.write("<div class='timeLineGraphInfo'>");
+                        document.write("<div class='fromStartToEnd'>");
+                          document.write("<div>");
+                            document.write(writeTimeFormat(user?.testReport?.timeline?.testStartTime, "", "", "A hh:mm"));
+                          document.write("</div>");
+                          document.write("<div>");
+                            document.write(writeTimeFormat(user?.testReport?.timeline?.testEndTime, "", "", "A hh:mm"));
+                          document.write("</div>");
+                        document.write("</div>");
+                        document.write("<div class='barGraph'>");
+                          document.write("<div class='unitBarPart'>");
+                            columnCount?.map((value, index) => {
+                              let margin_left = "margin-left : calc(100% * ";
+                              margin_left += graphUnit;
+                              margin_left += " / ";
+                              margin_left += user?.testReport?.timeline?.testVideoLength;
+                              margin_left += ");";
+                              document.write("<div class='unitBar' key='"+index+"' style='"+margin_left+"'>");
+                                document.write("<div>");
+                                  document.write((graphUnit / 60) * (index + 1));
+                                document.write("</div>");
+                                document.write("<div class='columnStick' key='"+index+"'></div>");
+                              document.write("</div>");
+                            });
+                          document.write("</div>");
+                          document.write("<div class='eventBarPart'>");
+                            user?.testReport?.timeline?.timelineTable?.map((value, index) => {
+                              let left = "left : calc( ";
+                              left += value?.startTime;
+                              left += "* 100% / ";
+                              left += user?.testReport?.timeline?.testVideoLength;
+                              left += ");";
+                              let width = " width : calc( 100% / ";
+                              width += user?.testReport?.timeline?.testVideoLength
+                              width += " * ( ";
+                              width += value?.endTime;
+                              width += " - ";
+                              width += value?.startTime;
+                              width += " ));";
+                              if(value?.level === "cheat") {
+                                document.write("<div id='StEventBar' class='eventCheat' style='"+left+width+"'>");
+                              } else {
+                                document.write("<div id='StEventBar' class='eventAbnormal' style='"+left+width+"'>");
+                              }
+                                  document.write("<div class='event'></div>");
+                                document.write("</div>");
+                            });
+                          document.write("</div>");
+                        document.write("</div>");
+                      document.write("</div>");
+                    document.write("</div>");
+                    document.write("<div class='rightShow'>");
+                      document.write("<div>보기기준 :&nbsp;&nbsp;</div>");
+                      document.write("<div class='viewall show'\
+                      onclick='setShow(this);'\
+                      >");
+                        document.write("전체");
+                      document.write("</div>");
+                      document.write("<div class='greyColumn'></div>");
+                      document.write("<div class='viewcheating'\
+                      onclick='setShow(this);'\
+                      >");
+                        document.write("부정행위");
+                      document.write("</div>");
+                      document.write("<div class='greyColumn'></div>");
+                      document.write("<div class='viewabnormal'\
+                      onclick='setShow(this);'\
+                      >");
+                        document.write("이상행동");
+                      document.write("</div>");
+                    document.write("</div>");
+                    document.write("<div class='videoInfo'>");
+                      if(testVideo) {
+                        document.write("<video\
+                          id='video'\
+                          playsInline\
+                          preload='auto'\
+                          src='"+testVideo.videoUrl+"'\
+                          class='userVideo'\
+                          height='298px'\
+                          width='530px'\
+                          controls></video>");
+                      }
+                      document.write("<div class='cheatingList'>");
+                        // 전부 그리고 show 번호에 따라 display처리
+                        // show 1
+                        document.write("<div id='show1'>");
+                          if(user?.testReport?.timetable?.length !== 0) {
+                            document.write("<div id='scrollableContainer' class='videoLeftIn'>");
+                              drawTimeTableAction(user?.testReport?.timetable);
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='videoLeftInTwo'>");
+                              document.write("이벤트 없음");
+                            document.write("</div>");
+                          }
+                        document.write("</div>");
+                        // show 2
+                        document.write("<div id='show2' style='display:none;'>");
+                          if(cheating?.length !== 0) {
+                            document.write("<div id='scrollableContainer' class='videoLeftIn'>");
+                              drawTimeTableAction(cheating);
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='videoLeftInTwo'>");
+                              document.write("이벤트 없음");
+                            document.write("</div>");
+                          }
+                        document.write("</div>");
+                        // show 3
+                        document.write("<div id='show3' style='display:none;'>");
+                          if(abnormal?.length !== 0) {
+                            document.write("<div id='scrollableContainer' class='videoLeftIn'>");
+                              drawTimeTableAction(abnormal);
+                            document.write("</div>");
+                          } else {
+                            document.write("<div class='videoLeftInTwo'>");
+                              document.write("이벤트 없음");
+                            document.write("</div>");
+                          }
+                        document.write("</div>");
+                        document.write("<div class='videoSharingButton'>");
+                          document.write("<img src='./img/reportSpecific/sharing.svg'></img>");
+                            document.write("<div id='shareButton'>");
+                              document.write("선택한 영상 전달하기");
+                            document.write("</div>");
+                        document.write("</div>");
+                      document.write("</div>");
+                    document.write("</div>");
+                  document.write("</div>");  
+                }
+            </script>
+            <!-- Detected Issues End -->
+            <!-- Physical / Environmental Data Start -->
+            <script>
+              if(user?.testReport?.status !== "incompleteTest" &
+                user?.testReport?.status !== "uploadNotCompleted" &
+                user?.testReport?.status !== "errorCase") {
+                  document.write("<div class='detectedGraphBox'>");
+                    document.write("<div class='title'>");
+                      document.write("신체/환경 요소 별 감지 데이터");
+                    document.write("</div>");
+                    document.write("<div class='bodyInfo'>");
+                      document.write("<div class='forBody'>");
+                        drawPhysical(user?.testReport?.analysis);
+                      document.write("</div>");
+                      drawGraph(user?.testReport?.analysis);
+                    document.write("</div>");
+                  document.write("</div>");
+                }
+            </script>
+            <!-- Physical / Environmental Data End -->
+            
+            <div class="environmentBucket">
+              <!-- Environment Scans Start -->
+              <div class="environmentForTestBox">
+                <div class="titlePart">
+                  <div class="title">
+                    주변환경 스캔 내역
+                  </div>
+                  <script>
+                    if(settingPhoto?.aroundSetting?.reactivateTestPhotos?.length > 1) {
+                      document.write("<div class='filterForRetake'>");
+                        document.write("<div\
+                          id='retakeFilterItemOne'\
+                          class='retakeFilterItemOne show'\
+                          style='cursor:pointer;'\
+                          onclick='setEnvironmentFilter(1);'\
+                        >");
+                          document.write("시작 직전");
+                        document.write("</div>");
+                        document.write("<div class='middleBar'></div>");
+                        document.write("<div\
+                          id='retakeFilterItemTwo'\
+                          class='retakeFilterItemTwo'\
+                          style='cursor:pointer;'\
+                          onclick='setEnvironmentFilter(2);'\
+                        >");
+                          document.write("응시 중 재점검");
+                        document.write("</div>");
+                      document.write("</div>");
+                    }
+                  </script>
+                </div>
+                <div class='photoPart'>
+                  <script>
+                    // Todo onclick Modal
+                    document.write("<img\
+                      id='envFilter1'\
+                      class='tempered'\
+                      style='cursor:pointer;'\
+                      src='"+settingPhoto?.aroundSetting?.preTestPhoto+"'\
+                      onclick=photoModalOn('Modal1');\
+                      alt=''\
+                    />");
+                    // Todo onclick Modal
+                    document.write("<img\
+                      id='envFilter2'\
+                      class='tempered'\
+                      style='cursor:pointer;display:none;'\
+                      src='"+settingPhoto?.aroundSetting?.reactivateTestPhotos?.[0]+"'\
+                      onclick=photoModalOn('Modal2');\
+                      alt=''\
+                    />");
+                    if(settingPhoto?.aroundSetting?.reactivateTestPhotos?.length > 1) {
+                      document.write("<div\
+                        id='envFilter2Count'\
+                        class='photoCount'\
+                        style='display:none;'\
+                      >");
+                        document.write("+ ");
+                        document.write(settingPhoto?.aroundSetting?.reactivateTestPhotos?.length - 1);
+                      document.write("</div>");
+                    }
+                  </script>
+                </div>
+                <script>
+                  if(settingPhoto?.aroundSetting?.isVerifiedEnvironment === false) {
+                    document.getElementById("envFilter1").classList.add('detected');
+                    document.getElementById("envFilter2").classList.add('detected');
+                    document.write("<div class='warningPart'>");
+                      document.write("<div class='warningText'>");
+                        document.write("금지 물건이 감지되어 확인 및 검토가 필요해요.");
+                        document.write("Review and confirmation are required.");
+                      document.write("</div>");
+                      if(settingPhoto?.aroundSetting?.reactivateTestPhotos?.length > 1) {
+                        document.write("<div id='infoText' class='infoText' style='display:none;'>");
+                          document.write("* 가장 마지막 내역부터 순차적으로 확인이 가능해요.");
+                        document.write("</div>");
+                      }
+                    document.write("</div>");
+                  }
+                </script>
+              </div>
+              <!-- Environment Scans End -->
+              <!-- Camera View Adjustment Start -->
+              <div class="environmentForTestBox">
+                <div class="titlePart">
+                  <div class="title">카메라 거치 내역</div>
+                  <script>
+                    if(settingPhoto?.cameraSetting?.reactivateTestPhotos?.length >= 1) {
+                      document.write("<div class='filterForRetake'>");
+                        document.write("<div\
+                          id='retakeFilterItemThree'\
+                          class='retakeFilterItemThree show'\
+                          style='cursor:pointer;'\
+                          onclick='setCameraSettingFilter(1);'\
+                        >");
+                          document.write("시작 직전");
+                        document.write("</div>");
+                        document.write("<div class='middleBar'></div>");
+                        document.write("<div\
+                          id='retakeFilterItemFour'\
+                          class='retakeFilterItemFour'\
+                          style='cursor:pointer;'\
+                          onclick='setCameraSettingFilter(2);'\
+                        >");
+                          document.write("응시 중 재점검");
+                        document.write("</div>");
+                      document.write("</div>");
+                    }
+                  </script>
+                </div>
+                <div class="photoPart">
+                  <script>
+                    // Todo onclick Modal
+                    document.write("<img\
+                      id='cameraFilter1'\
+                      class='tempered'\
+                      style='cursor:pointer;'\
+                      src='"+settingPhoto?.cameraSetting?.preTestPhoto+"'\
+                      onclick=photoModalOn('Modal3');\
+                      alt=''\
+                    />");
+                    // Todo onclick Modal
+                    document.write("<img\
+                      id='cameraFilter2'\
+                      class='tempered'\
+                      style='cursor:pointer;display:none;'\
+                      src='"+settingPhoto?.cameraSetting?.reactivateTestPhotos?.[0]+"'\
+                      onclick=photoModalOn('Modal4');\
+                      alt=''\
+                    />");
+                    if(settingPhoto?.cameraSetting?.reactivateTestPhotos?.length > 1) {
+                      document.write("<div\
+                        id='cameraFilter2Count'\
+                        class='photoCount'\
+                        style='display:none;'\
+                      >");
+                        document.write("+ ");
+                        document.write(settingPhoto?.cameraSetting?.reactivateTestPhotos?.length - 1);
+                      document.write("</div>");
+                    }
+                  </script>
+                </div>
+                <div id="cameraFilter2Text" style="display:none;">
+                  * 가장 마지막 내역부터 순차적으로 확인이 가능해요.
+                </div>
+              </div>
+              <!-- Camera View Adjustment End -->
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.getElementById("arrow").addEventListener('click', function() {
+    // location.href='report.html?'+location.href.split('?')[1].split("&")[0];
+    location.href='report.html?'+reportNumber;
+  });
+  document.getElementById("userPhoto").src = "/Proctormatic-demo-kr/img/reportSpecific/uploaderPhoto/"+reportNumber+"/"+targetNumber+"/face-photo.png";
+  document.getElementById("video").src = "/Proctormatic-demo-kr/media/reportSpecific/"+reportNumber+"/"+targetNumber+"/combined_video.mp4";
+  document.getElementById("emailPart").href = 'mailto:'+ user?.testReport?.uploader?.uploaderEmail;
+</script>
+</html>

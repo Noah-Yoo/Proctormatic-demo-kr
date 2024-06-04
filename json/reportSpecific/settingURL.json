@@ -1,0 +1,49 @@
+settingURL = [
+  {
+    "report": [
+      {
+        "isSuccess": true,
+        "aroundSetting": {
+            "isVerifiedEnvironment": true,
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/0/aroundSetting/1.png",
+            "reactivateTestPhotos": []
+        },
+        "cameraSetting": {
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/0/cameraSetting/1.png",
+            "reactivateTestPhotos": [
+                "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/0/cameraSetting/2.png"
+            ]
+        }
+      },
+      {
+        "isSuccess": true,
+        "aroundSetting": {
+            "isVerifiedEnvironment": true,
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/1/aroundSetting/1.png",
+            "reactivateTestPhotos": []
+        },
+        "cameraSetting": {
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/1/cameraSetting/1.png",
+            "reactivateTestPhotos": [
+                "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/1/cameraSetting/2.png"
+            ]
+        }
+      },
+      {
+        "isSuccess": true,
+        "aroundSetting": {
+            "isVerifiedEnvironment": true,
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/2/aroundSetting/1.png",
+            "reactivateTestPhotos": []
+        },
+        "cameraSetting": {
+            "preTestPhoto": "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/2/cameraSetting/1.png",
+            "reactivateTestPhotos": [
+                "/Proctormatic-demo-kr/img/reportSpecific/settingPhoto/0/2/cameraSetting/2.png"
+            ]
+        }
+      },
+
+    ]
+  }
+]

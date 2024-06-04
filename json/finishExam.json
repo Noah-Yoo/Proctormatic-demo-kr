@@ -1,0 +1,16 @@
+finishExam = {
+  "isSuccess": true,
+  "getTestVerifiedList": [
+      {
+          "testUuid": "601b2e92-e4b0-4f34-b6f3-7bd9d88df02d",
+          "testName": " CES 2024. Exhibition test 2",
+          "testUploaded": 11,
+          "testStep": "afterSendMail",
+          "testStartTime": "2023-12-29 14:30",
+          "testEndTime": "2023-12-29 15:00",
+          "testFinishTime": "2024-01-02 17:50",
+          "clickable": true,
+          "index": 0,
+      }
+  ]
+}
