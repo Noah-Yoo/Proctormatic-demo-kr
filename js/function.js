@@ -69,22 +69,24 @@ function writeTimeFormat(startTime, endTime, delimeter, TimeFormat) {
   
   if(endTime === undefined) {
     let st = new Date(startTime);
-    str += (st.getMonth()+1)+"/"+st.getDate()+"/"+st.getFullYear()+"("+day[st.getDay()]+"), ";
-    str += st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
-    str += ":";
-    str += st.getMinutes() < 10 ? "0"+st.getMinutes() : st.getMinutes();
+    str += st.getFullYear() + "-";
+    str += st.getMonth + 1 < 10 ? "0" + st.getMonth + 1 : st.getMonth + 1;
+    str += "-";
+    str += st.getDate() < 10 ? "0" + st.getDate() : st.getDate();
     str += " ";
-    str += st.getHours() >= 12 ? "오후" : "오전";
+    str += st.getHours() < 10 ? "0" + st.getHours() : st.getHours();
+    str += ":";
+    str += st.getMinutes() < 10 ? "0" + st.getMinutes() : st.getMinutes();
   } else if(TimeFormat === "hh:mm:ss A") {
     let st = new Date(startTime);
     let hour = st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
-    str += hour < 10 ? "0"+hour : hour;
-    str += ":";
-    str += st.getMinutes() < 10 ? "0"+st.getMinutes() : st.getMinutes();
-    str += ":";
-    str += st.getSeconds() < 10 ? "0"+st.getSeconds() : st.getSeconds();
-    str += " ";
     str += st.getHours() >= 12 ? "오후" : "오전";
+    str += " ";
+    str += hour < 10 ? "0" + hour : hour;
+    str += ":";
+    str += st.getMinutes() < 10 ? "0" + st.getMinutes() : st.getMinutes();
+    str += ":";
+    str += st.getSeconds() < 10 ? "0" + st.getSeconds() : st.getSeconds();
   } else if(TimeFormat === "A hh:mm") {
     let st = new Date(startTime);
     let hour = st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
@@ -96,18 +98,24 @@ function writeTimeFormat(startTime, endTime, delimeter, TimeFormat) {
   } else {
     let st = new Date(startTime);
     let et = new Date(endTime);
-    str += (st.getMonth()+1)+"/"+st.getDate()+"/"+st.getFullYear()+"("+day[st.getDay()]+"), ";
-    str += st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
-    str += ":";
-    str += st.getMinutes() < 10 ? "0"+st.getMinutes() : st.getMinutes();
-    str += " ";
+    let sHour = st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
+    let eHour = et.getHours() > 12 ? et.getHours() - 12 : st.getHours();
+    str += st.getFullYear() + "-";
+    str += st.getMonth + 1 < 10 ? "0" + st.getMonth + 1 : st.getMonth + 1;
+    str += "-";
+    str += st.getDate() < 10 ? "0" + st.getDate() : st.getDate();
+    str += "(" + day[st.getDay()] + ") ";
     str += st.getHours() >= 12 ? "오후" : "오전";
-    str += delimeter === undefined ? " ~ " : " " + delimeter + " ";
-    str += et.getHours() > 12 ? et.getHours() - 12 : et.getHours();
-    str += ":";
-    str += et.getMinutes() < 10 ? "0"+et.getMinutes() : et.getMinutes();
     str += " ";
+    str += sHour < 10 ? "0" + sHour : sHour;
+    str += ":";
+    str += st.getMinutes() < 10 ? "0" + st.getMinutes() : st.getMinutes();
+    str += " ~ ";
     str += et.getHours() >= 12 ? "오후" : "오전";
+    str += " ";
+    str += eHour < 10 ? "0" + eHour : eHour;
+    str += ":";
+    str += et.getMinutes() < 10 ? "0" + et.getMinutes() : et.getMinutes();
   }
   return str;
 }

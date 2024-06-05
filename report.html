@@ -67,7 +67,7 @@
                   <div class="middle">시험 날짜와 시간</div>
                   <div class="midGrey">
                     <script>
-                      document.write(writeTimeFormat(judge.testStartTime, judge.testEndTime, "-"));
+                      document.write(writeTimeFormat(judge.testStartTime, judge.testEndTime));
                       document.write(" ");
                       document.write("(UTC+");
                       document.write(-(new Date().getTimezoneOffset()) / 60);

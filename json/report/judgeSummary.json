@@ -2,15 +2,15 @@ judgeSummary = [
   {
     "isSuccess": true,
     "judgeSummary": {
-        "testName": " CES 2024. Exhibition test 2",
-        "testStartTime": "2023-12-29 14:30",
-        "testEndTime": "2023-12-29 15:00",
-        "testFinishTime": "2024-01-02 17:50",
+        "testName": " 중세 유럽 문화와 예술 양식에 대한 고찰 1부",
+        "testStartTime": "2024-06-10 09:00",
+        "testEndTime": "2024-06-10 09:30",
+        "testFinishTime": "2024-06-11 07:23",
         "isTesterSelfExit": true,
         "testPlannedTester": 15,
         "testActualTester": 11,
         "isReActivateAroundSetting": false,
-        "testComment": " CES 2024. Half participated normally",
+        "testComment": " 중세 유럽 문화와 예술 양식에 대한 고찰 1부 시험입니다. 응원합니다!",
         "uploaded": 11,
         "step": "afterSendMail",
         "progress": "100"
