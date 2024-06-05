@@ -1,53 +1,106 @@
 importScripts(
-  '/Proctormatic-demo-kr/workbox/workbox-v7.1.0/workbox-sw.js',
-  '/Proctormatic-demo-kr/workbox/workbox-v7.1.0/workbox-precaching.prod.js'
+  "/Proctormatic-demo-global/workbox/workbox-v7.1.0/workbox-sw.js",
+  "/Proctormatic-demo-global/workbox/workbox-v7.1.0/workbox-precaching.prod.js",
+  "/Proctormatic-demo-global/workbox/workbox-v7.1.0/workbox-routing.prod.js",
+  "/Proctormatic-demo-global/workbox/workbox-v7.1.0/workbox-strategies.prod.js",
+  "/Proctormatic-demo-global/workbox/workbox-v7.1.0/workbox-cacheable-response.prod.js",
 );
 
 if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
+  console.log(`Workbox is loaded`);
 
-  // 프리캐싱된 파일들
+  // 프리캐시된 파일들
   workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
-    ignoreURLParametersMatching: [/.*/] // 모든 쿼리 파라미터 무시
+    ignoreURLParametersMatching: [/.*/],
   });
 
-  self.addEventListener('install', (event) => {
+  self.addEventListener("install", (event) => {
     self.skipWaiting(); // 새로운 서비스 워커를 즉시 활성화
   });
 
-  // fetch 이벤트 처리
-  self.addEventListener('fetch', (event) => {
-    const url = new URL(event.request.url);
-    console.log("요청 url: ", url);
-    // 모든 HTML 파일에 대해 쿼리 파라미터를 무시하고 처리
-    if (event.request.destination === 'document') {
-      // 쿼리 파라미터를 제거한 URL을 생성
-      const cacheUrl = new URL(url.origin + url.pathname);
-      console.log("제거된 url: ", cacheUrl);
+  // 모든 HTML 파일 캐싱
+  workbox.routing.registerRoute(
+    ({ request }) => request.destination === "document",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "html-cache",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
 
-      event.respondWith(
-        caches.match(cacheUrl).then((response) => {
-          if (response) {
-            console.log("캐시에서 응답 반환: ", cacheUrl);
-            return response;
-          } else {
-            console.log("캐시에서 찾지 못함, 네트워크 요청: ", event.request.url);
-            return fetch(event.request);
-          }
-          // 캐시된 응답이 있으면 반환, 없으면 네트워크 요청
-          // return response || fetch(event.request);
-        }).catch(error => {
-          console.error("캐시 및 네트워크 응답 오류: ", error);
-        })
-      );
-    }
-  });
+  // 이미지 파일 캐싱 (png, svg)
+  workbox.routing.registerRoute(
+    ({ request }) => request.destination === "image",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "image-cache",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
 
-  self.addEventListener('activate', (event) => {
+  // JS, CSS 파일 캐싱
+  workbox.routing.registerRoute(
+    ({ request }) =>
+      request.destination === "script" || request.destination === "style",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "static-resources",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
+
+  // 폰트 파일 캐싱 (woff2)
+  workbox.routing.registerRoute(
+    ({ request }) => request.destination === "font",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "font-cache",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
+
+  // 비디오 파일 캐싱 (mp4)
+  workbox.routing.registerRoute(
+    ({ request }) => request.destination === "video",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "video-cache",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
+
+  // JSON 파일 캐싱
+  workbox.routing.registerRoute(
+    ({ request }) =>
+      request.destination === "json" || request.destination === "fetch",
+    new workbox.strategies.StaleWhileRevalidate({
+      cacheName: "json-cache",
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    }),
+  );
+
+  self.addEventListener("activate", (event) => {
     event.waitUntil(self.clients.claim()); // 새로운 서비스 워커가 즉시 클라이언트를 제어하도록 설정
   });
-
 } else {
-  console.log(`Boo! Workbox didn't load 😬`);
+  console.log(`Workbox didn't load`);
 }
-
