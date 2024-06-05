@@ -1,6 +1,6 @@
 {
-  "name": "Proctormatic",
-  "short_name": "Proctormatic Demo",
+  "name": "프록토매틱",
+  "short_name": "프록토매틱 데모",
   "start_url": "/Proctormatic-demo-kr/index.html",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -11,6 +11,33 @@ finishExam = {
           "testFinishTime": "2024-01-02 17:50",
           "clickable": true,
           "index": 0,
-      }
+      },
+      {
+        "testUuid": "601b2e92-e4b0-4f34-b6f3-7bd9d88df02d",
+        "testName": " 머신 러닝 기초1",
+        "testUploaded": 15,
+        "testStep": "afterSendMail",
+        "testStartTime": "2024-03-27 15:00",
+        "testEndTime": "2024-03-27 16:00",
+        "testFinishTime": "2024-03-28 18:30",
+      },
+      {
+        "testUuid": "601b2e92-e4b0-4f34-b6f3-7bd9d88df02d",
+        "testName": " 온라인 사용자 행동학",
+        "testUploaded": 30,
+        "testStep": "afterSendMail",
+        "testStartTime": "2024-04-12 11:00",
+        "testEndTime": "2024-04-12 12:00",
+        "testFinishTime": "2024-04-14 13:00",
+      },
+      {
+        "testUuid": "601b2e92-e4b0-4f34-b6f3-7bd9d88df02d",
+        "testName": " 국제 경영학개론1",
+        "testUploaded": 25,
+        "testStep": "afterSendMail",
+        "testStartTime": "2024-06-04 13:00",
+        "testEndTime": "2024-06-04 14:30",
+        "testFinishTime": "2024-06-06 14:00",
+      },
   ]
 }

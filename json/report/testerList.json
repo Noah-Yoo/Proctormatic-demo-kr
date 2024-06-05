@@ -10,7 +10,7 @@ testerList = [
                 "cheats": 5,
                 "check": "confirmStatus",
                 "clickable": true,
-                "index": 0
+                "index": 0,
             },
             {
                 "testerId": "11666",
@@ -19,7 +19,7 @@ testerList = [
                 "cheats": 5,
                 "check": "confirmStatus",
                 "clickable": true,
-                "index": 1
+                "index": 1,
             },
             {
                 "testerId": "11661",
@@ -28,14 +28,14 @@ testerList = [
                 "cheats": 3,
                 "check": "confirmStatus",
                 "clickable": true,
-                "index": 2
+                "index": 2,
             },
             {
                 "testerId": "11657",
                 "testerName": "An Jiyong",
                 "abnormals": 0,
                 "cheats": 1,
-                "check": "confirmStatus"
+                "check": "confirmStatus",
             }
         ],
         "normalList": [

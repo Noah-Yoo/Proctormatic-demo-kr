@@ -3,8 +3,8 @@ testSummary = {
   "getTestSummary": {
       "hostPlan": "individualPlan",
       "hostRegion": "KR",
-      "situation": "100%",
-      "success": 1,
-      "pending": 0
+      "situation": "57%",
+      "success": 4,
+      "pending": 3
   }
 }

@@ -12,17 +12,17 @@ eventSummary = [
         "detectObj": {
             "first": {
                 "level": "cheat",
-                "sort": "No one on screen (absence)",
+                "sort": "화면에 사람이 없음_자리 비움 (2초 이상)",
                 "count": 4
             },
             "second": {
                 "level": "cheat",
-                "sort": "Recording interrupted",
+                "sort": "카메라 촬영이 끊김_녹화 불가",
                 "count": 4
             },
             "third": {
                 "level": "cheat",
-                "sort": "Prohibited item(s) detected",
+                "sort": "금지물건이 있음 (1초 이상)",
                 "count": 3
             },
             "count": 23

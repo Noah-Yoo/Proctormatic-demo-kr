@@ -105,21 +105,21 @@
                                   document.write("<div class='StBox'>");
                                 }
                                 document.write("<div class='test'>"+fArr[i].testName+"</div>");
-                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='font12'>시험 날짜와 시간</div>");
                                 document.write("<div class='grey'>");
                                 document.write(writeTimeFormat(fArr[i].testStartTime, fArr[i].testEndTime));
                                 document.write("</div>");
                                 document.write("<div class='write'>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='simple12'>업로드 된 영상수</div>");
                                 document.write("<div class='blue'>"+fArr[i].testUploaded+"</div>")
                                 document.write("</div>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Status</div>");
+                                document.write("<div class='simple12'>진행 현황</div>");
                                 document.write("<div class='progress'>"+setStep(fArr[i].testStep)+"</div>");
                                 document.write("</div>");
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Completed</div>");
+                                document.write("<div class='simple12'>검증 완료 시간</div>");
 
                                 if(fArr[i].testFinishTime === "-") {
                                   document.write("<div class='blue'>-</div>");
@@ -131,7 +131,7 @@
                                 document.write("</div>");
 
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='simple12'>검증 결과보고서</div>");
                                 document.write("<div class='blue'>"+setReport(fArr[i].testStep)+"</div>");
                                 document.write("</div>");
                                 document.write("</div>");
@@ -163,28 +163,28 @@
                         <script>
                           if(bArr?.length !== 0) {
                             document.write("<div class='boxs'>");
-                              for(var i = 0; i < Number(wLen); i++) {
+                              for(var i = 0; i < Number(bLen); i++) {
                                 if(bArr[i].clickable === true) {
                                   document.write("<div class='StBox before' onclick=location.href='report.html?"+bArr[i].index+"'>");
                                 }else {
                                   document.write("<div class='StBox before'>");
                                 }
                                 document.write("<div class='test'>"+bArr[i].testName+"</div>");
-                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='font12'>시험 날짜와 시간</div>");
                                 document.write("<div class='grey'>");
                                 document.write(writeTimeFormat(bArr[i].testStartTime, bArr[i].testEndTime));
                                 document.write("</div>");
                                 document.write("<div class='write'>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='simple12'>업로드 된 영상수</div>");
                                 document.write("<div class='blue'>"+bArr[i].testUploaded+"</div>")
                                 document.write("</div>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Status</div>");
-                                document.write("<div class='progress'>"+setStep(bArr[i].testStep)+"</div>");
+                                document.write("<div class='simple12'>진행 현황</div>");
+                                document.write("<div class='progress'>"+setStep(bArr[i].testStep, bArr[i].testVerifying)+"</div>");
                                 document.write("</div>");
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Completed</div>");
+                                document.write("<div class='simple12'>예상 완료 시간</div>");
 
                                 if(bArr[i].testFinishTime === "-") {
                                   document.write("<div class='blue'>-</div>");
@@ -196,7 +196,7 @@
                                 document.write("</div>");
 
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='simple12'>검증 결과보고서</div>");
                                 document.write("<div class='blue'>"+setReport(bArr[i].testStep)+"</div>");
                                 document.write("</div>");
                                 document.write("</div>");
@@ -235,21 +235,21 @@
                                   document.write("<div class='StBox'>");
                                 }
                                 document.write("<div class='test'>"+wArr[i].testName+"</div>");
-                                document.write("<div class='font12'>Date and Time</div>");
+                                document.write("<div class='font12'>시험 날짜와 시간</div>");
                                 document.write("<div class='grey'>");
                                 document.write(writeTimeFormat(wArr[i].testStartTime, wArr[i].testEndTime));
                                 document.write("</div>");
                                 document.write("<div class='write'>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Uploaded Videos</div>");
+                                document.write("<div class='simple12'>업로드 된 영상수</div>");
                                 document.write("<div class='blue'>"+wArr[i].testUploaded+"</div>")
                                 document.write("</div>");
                                 document.write("<div class='writeLine'>");
-                                document.write("<div class='simple12'>Status</div>");
+                                document.write("<div class='simple12'>진행 현황</div>");
                                 document.write("<div class='progress'>"+setStep(wArr[i].testStep)+"</div>");
                                 document.write("</div>");
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Completed</div>");
+                                document.write("<div class='simple12'>예상 완료 시간</div>");
 
                                 if(wArr[i].testFinishTime === "-") {
                                   document.write("<div class='blue'>-</div>");
@@ -261,7 +261,7 @@
                                 document.write("</div>");
 
                                 document.write("<div class='StLine mobile writeLine'>");
-                                document.write("<div class='simple12'>Report</div>");
+                                document.write("<div class='simple12'>검증 결과보고서</div>");
                                 document.write("<div class='blue'>"+setReport(wArr[i].testStep)+"</div>");
                                 document.write("</div>");
                                 document.write("</div>");

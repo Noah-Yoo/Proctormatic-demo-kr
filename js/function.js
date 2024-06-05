@@ -1,7 +1,7 @@
 var selectedClass;
 var timeout;
 
-function setStep(testStep) {
+function setStep(testStep, testVerifying) {
   let step;
   switch (testStep) {
     case "beforeStart": // 진행예정
@@ -11,8 +11,7 @@ function setStep(testStep) {
       step = "검증 대기 중";
       break;
     case "analyzing":
-      // 추후 필요하면 Pending 불러오는것도 JSON 추가해서 변경
-      step = "검증 중"
+      step = "검증 중 (" + testVerifying + "%)";
       break;
     case "afterAnalysis":
       step = "검증 완료";
