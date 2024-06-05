@@ -70,7 +70,8 @@ function writeTimeFormat(startTime, endTime, delimeter, TimeFormat) {
   if(endTime === undefined) {
     let st = new Date(startTime);
     str += st.getFullYear() + "-";
-    str += st.getMonth() + 1 < 10 ? "0" + st.getMonth() + 1 : st.getMonth() + 1;
+    str +=
+      st.getMonth() + 1 < 10 ? "0" + (st.getMonth() + 1) : st.getMonth() + 1;
     str += "-";
     str += st.getDate() < 10 ? "0" + st.getDate() : st.getDate();
     str += " ";
@@ -101,7 +102,8 @@ function writeTimeFormat(startTime, endTime, delimeter, TimeFormat) {
     let sHour = st.getHours() > 12 ? st.getHours() - 12 : st.getHours();
     let eHour = et.getHours() > 12 ? et.getHours() - 12 : st.getHours();
     str += st.getFullYear() + "-";
-    str += st.getMonth() + 1 < 10 ? "0" + st.getMonth() + 1 : st.getMonth() + 1;
+    str +=
+      st.getMonth() + 1 < 10 ? "0" + (st.getMonth() + 1) : st.getMonth() + 1;
     str += "-";
     str += st.getDate() < 10 ? "0" + st.getDate() : st.getDate();
     str += "(" + day[st.getDay()] + ") ";
