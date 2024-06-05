@@ -183,6 +183,7 @@ function drawChartList(List, Len) {
             document.write("");
           } else {
             document.write(List[i].abnormals + List[i].cheats);
+            document.write("<div class='small'>건</div>");
           }
         document.write("</div>");
         document.write("<div class='pc'>");
