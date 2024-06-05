@@ -292,9 +292,9 @@ function drawTimeTableAction(timetable) {
               document.write("<div class='evaluate else'>");
             }
               if(value.level === "cheat") {
-                document.write("Urgent");
+                document.write("부정행위");
               } else if(value.level === "abnormal") {
-                document.write("Recommended");
+                document.write("이상행동");
               }
             document.write("</div>");
             document.write("<div class='greyBar'></div>");

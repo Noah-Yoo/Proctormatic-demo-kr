@@ -38,7 +38,7 @@ function drawGraph(analysis) {
         document.write("<div class='bodyParts' key="+index+">");
           document.write("<div class='redDot' style='background-color:"+temp+";'></div>");
           document.write("<div class='bodyPart'>");
-            document.write(value.part);
+            document.write(value.partKr);
           document.write("</div>");
         document.write("</div>");
       });
